@@ -1,0 +1,7 @@
+{"setting": "small", "first_pass": 31766, "largest_first": 2300, "refusal_expansion_plan": 40691, "every_question_expands": 75073, "expansions_over_tpm": 0}
+{"setting": "medium", "first_pass": 50267, "largest_first": 3637, "refusal_expansion_plan": 63650, "every_question_expands": 117617, "expansions_over_tpm": 0}
+{"setting": "large", "first_pass": 74914, "largest_first": 5773, "refusal_expansion_plan": 94086, "every_question_expands": 171418, "expansions_over_tpm": 0}
+Refusal-expansion planning estimate: 198427 ; token/day limit entered: 200000
+Every-question-expands estimate: 364108
+Planned calls if only expected refusals expand: 54 ; request/day limit entered: 1000
+Not a usage prediction or upper bound. Actual model refusals can differ. Bytes/3 estimates may over- or underestimate tokens; fitted expansions may be smaller. Probes, verifier calls, retries and reruns are EXTRA. Keep a reserve; split across days if necessary.

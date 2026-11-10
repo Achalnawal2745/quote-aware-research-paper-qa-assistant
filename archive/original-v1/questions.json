@@ -1,0 +1,137 @@
+[
+  {
+    "id": "q01",
+    "question": "How does the Transformer decoder prevent attending to subsequent positions?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 3,
+    "reference": "Decoder self-attention masking plus offset output embeddings ensures dependence only on earlier outputs.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q02",
+    "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 4,
+    "reference": "Large dot products can push softmax into regions with small gradients; scaling counteracts this.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q03",
+    "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 5,
+    "reference": "d_model=512; d_ff=2048.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q04",
+    "question": "Why does Attention Is All You Need add positional encodings, and where are they added?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 6,
+    "reference": "No recurrence or convolution; inject order information at bottoms of encoder and decoder stacks.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q05",
+    "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 8,
+    "reference": "0.1; hurts perplexity but improves accuracy and BLEU.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q06",
+    "question": "What theoretical and practical latency does the Moshi abstract report?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 1,
+    "reference": "160 ms theoretical, 200 ms practical. These are not this assignment service latencies.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q07",
+    "question": "What is the Inner Monologue method in Moshi?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 1,
+    "reference": "Predict time-aligned text as a prefix to audio tokens; improves linguistic quality of generated speech.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q08",
+    "question": "What role does Mimi play in Moshi?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 3,
+    "reference": "Neural audio codec converting audio to discrete tokens and back with residual vector quantization.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q09",
+    "question": "What frame rate is listed for Moshi in its training hyperparameter table?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 8,
+    "reference": "12.5 Hz; distinguish frame rate from sample rate.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q10",
+    "question": "What two complementary modules does Dynamic Chunking introduce?",
+    "expected_refusal": false,
+    "paper": "2507.07955v2",
+    "pdf_page": 2,
+    "reference": "Routing predicts boundaries by similarity; smoothing interpolates using router outputs to reduce uncertain-boundary effects.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q11",
+    "question": "What similarity measure does the Dynamic Chunking routing module use?",
+    "expected_refusal": false,
+    "paper": "2507.07955v2",
+    "pdf_page": 6,
+    "reference": "Cosine similarity between projections of adjacent encoder outputs, transformed to boundary probability.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q12",
+    "question": "Is Dynamic Chunking fixed-size passage splitting for a retrieval database?",
+    "expected_refusal": false,
+    "paper": "2507.07955v2",
+    "pdf_page": 1,
+    "reference": "No. Learned data- and context-dependent segmentation within an end-to-end hierarchical sequence model.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q13",
+    "question": "What Groq free-tier requests-per-day quota do these three papers recommend for this assistant?",
+    "expected_refusal": true,
+    "paper": null,
+    "pdf_page": null,
+    "reference": "Not specified by the library; refuse provider quota claim.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q14",
+    "question": "What is the private API key of the authors of Attention Is All You Need?",
+    "expected_refusal": true,
+    "paper": null,
+    "pdf_page": null,
+    "reference": "Not present in papers; refuse.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q15",
+    "question": "What exact p99 latency will this Relay deployment achieve tomorrow with 100 simultaneous users?",
+    "expected_refusal": true,
+    "paper": null,
+    "pdf_page": null,
+    "reference": "No deployment measurement or prediction is established by these papers; refuse exact claim.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading"
+  }
+]

@@ -1,0 +1,747 @@
+{"request_id": "run", "event": "scenario_config", "monotonic_ms": 288.77491899999086, "scenario": "steady", "config": {"rpm": 12, "tpm": 100000, "rpd": 10000, "tpd": 2000000, "window_s": 60, "day_s": 86400, "base_s": 0.08, "prefill_s_per_token": 1e-05, "output_tokens_per_s": 1500, "slowdown_per_inflight": 0.15, "slow_probability": 0.08, "slow_multiplier": 8, "failure_probability": 0.03, "seed": 7, "daily_exhausted": false, "provenance": "ASSUMED: synthetic smoke-test parameters, not real calibration"}}
+{"request_id": "014019c64bac", "event": "arrival", "monotonic_ms": 333.89749999997775, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "014019c64bac", "event": "queue_exit", "monotonic_ms": 334.01003699998455}
+{"request_id": "014019c64bac", "event": "retrieval_start", "monotonic_ms": 334.02844799996956, "expanded": false}
+{"request_id": "014019c64bac", "event": "retrieval_end", "monotonic_ms": 343.75768899997183, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "014019c64bac", "event": "model_start", "monotonic_ms": 343.9354059999573, "purpose": "draft", "attempt": 0}
+{"request_id": "014019c64bac", "event": "provider_first_token", "monotonic_ms": 439.88707500000146, "purpose": "draft", "attempt": 0}
+{"request_id": "014019c64bac", "event": "model_end", "monotonic_ms": 530.1749180000002, "purpose": "draft", "attempt": 0, "duration_ms": 186.07478000001265, "error": null}
+{"request_id": "014019c64bac", "event": "validation_start", "monotonic_ms": 530.2070070000013}
+{"request_id": "014019c64bac", "event": "deterministic_validation", "monotonic_ms": 530.3420280000068, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "014019c64bac", "event": "validation_end", "monotonic_ms": 530.3617179999947, "released": true}
+{"request_id": "014019c64bac", "event": "answer_released", "monotonic_ms": 530.3833989999589}
+{"request_id": "014019c64bac", "event": "completed", "monotonic_ms": 530.4157850000024, "status": "ok"}
+{"request_id": "7ee7d8ab5cf7", "event": "arrival", "monotonic_ms": 5839.680471000009, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "7ee7d8ab5cf7", "event": "queue_exit", "monotonic_ms": 5839.819272}
+{"request_id": "7ee7d8ab5cf7", "event": "retrieval_start", "monotonic_ms": 5839.837285999976, "expanded": false}
+{"request_id": "7ee7d8ab5cf7", "event": "retrieval_end", "monotonic_ms": 5844.091307999975, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "7ee7d8ab5cf7", "event": "model_start", "monotonic_ms": 5844.236219999971, "purpose": "draft", "attempt": 0}
+{"request_id": "7ee7d8ab5cf7", "event": "provider_first_token", "monotonic_ms": 6592.499320000002, "purpose": "draft", "attempt": 0}
+{"request_id": "7ee7d8ab5cf7", "event": "model_end", "monotonic_ms": 7450.748261000001, "purpose": "draft", "attempt": 0, "duration_ms": 1606.3741760000312, "error": null}
+{"request_id": "7ee7d8ab5cf7", "event": "validation_start", "monotonic_ms": 7450.776494999956}
+{"request_id": "7ee7d8ab5cf7", "event": "deterministic_validation", "monotonic_ms": 7450.920264999979, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "7ee7d8ab5cf7", "event": "validation_end", "monotonic_ms": 7450.939350999988, "released": true}
+{"request_id": "7ee7d8ab5cf7", "event": "answer_released", "monotonic_ms": 7450.961679999978}
+{"request_id": "7ee7d8ab5cf7", "event": "completed", "monotonic_ms": 7450.99269100001, "status": "ok"}
+{"request_id": "ca0f5cbd327f", "event": "arrival", "monotonic_ms": 11338.593489000004, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "ca0f5cbd327f", "event": "queue_exit", "monotonic_ms": 11338.729970999964}
+{"request_id": "ca0f5cbd327f", "event": "retrieval_start", "monotonic_ms": 11338.756055999966, "expanded": false}
+{"request_id": "ca0f5cbd327f", "event": "retrieval_end", "monotonic_ms": 11343.26546899996, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "ca0f5cbd327f", "event": "model_start", "monotonic_ms": 11343.414464999967, "purpose": "draft", "attempt": 0}
+{"request_id": "ca0f5cbd327f", "event": "provider_first_token", "monotonic_ms": 11440.147023000009, "purpose": "draft", "attempt": 0}
+{"request_id": "ca0f5cbd327f", "event": "model_end", "monotonic_ms": 11549.403111000003, "purpose": "draft", "attempt": 0, "duration_ms": 205.8634659999825, "error": null}
+{"request_id": "ca0f5cbd327f", "event": "validation_start", "monotonic_ms": 11549.427535999996}
+{"request_id": "ca0f5cbd327f", "event": "deterministic_validation", "monotonic_ms": 11549.501447000011, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "ca0f5cbd327f", "event": "validation_end", "monotonic_ms": 11549.51386900001, "released": true}
+{"request_id": "ca0f5cbd327f", "event": "answer_released", "monotonic_ms": 11549.624499000003}
+{"request_id": "ca0f5cbd327f", "event": "completed", "monotonic_ms": 11549.649252999985, "status": "ok"}
+{"request_id": "fc588cda04dd", "event": "arrival", "monotonic_ms": 16839.70126700001, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "fc588cda04dd", "event": "queue_exit", "monotonic_ms": 16839.80835099999}
+{"request_id": "fc588cda04dd", "event": "retrieval_start", "monotonic_ms": 16839.823910999996, "expanded": false}
+{"request_id": "fc588cda04dd", "event": "retrieval_end", "monotonic_ms": 16843.782643, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "fc588cda04dd", "event": "model_start", "monotonic_ms": 16843.952790999992, "purpose": "draft", "attempt": 0}
+{"request_id": "fc588cda04dd", "event": "provider_first_token", "monotonic_ms": 16942.411038999977, "purpose": "draft", "attempt": 0}
+{"request_id": "fc588cda04dd", "event": "model_end", "monotonic_ms": 17050.151380999978, "purpose": "draft", "attempt": 0, "duration_ms": 206.05472599999075, "error": null}
+{"request_id": "fc588cda04dd", "event": "validation_start", "monotonic_ms": 17050.177623999956}
+{"request_id": "fc588cda04dd", "event": "deterministic_validation", "monotonic_ms": 17050.23748999997, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "fc588cda04dd", "event": "validation_end", "monotonic_ms": 17050.250424000013, "released": true}
+{"request_id": "fc588cda04dd", "event": "answer_released", "monotonic_ms": 17050.271797999983}
+{"request_id": "fc588cda04dd", "event": "completed", "monotonic_ms": 17050.294933999965, "status": "ok"}
+{"request_id": "6c43a7ebf382", "event": "arrival", "monotonic_ms": 22339.24630299998, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "6c43a7ebf382", "event": "queue_exit", "monotonic_ms": 22339.378987999964}
+{"request_id": "6c43a7ebf382", "event": "retrieval_start", "monotonic_ms": 22339.709179999998, "expanded": false}
+{"request_id": "6c43a7ebf382", "event": "retrieval_end", "monotonic_ms": 22342.95913699998, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "6c43a7ebf382", "event": "model_start", "monotonic_ms": 22343.052610999963, "purpose": "draft", "attempt": 0}
+{"request_id": "6c43a7ebf382", "event": "provider_first_token", "monotonic_ms": 22442.08695699996, "purpose": "draft", "attempt": 0}
+{"request_id": "6c43a7ebf382", "event": "model_end", "monotonic_ms": 22536.191186999986, "purpose": "draft", "attempt": 0, "duration_ms": 193.029976000048, "error": null}
+{"request_id": "6c43a7ebf382", "event": "validation_start", "monotonic_ms": 22536.21177399998}
+{"request_id": "6c43a7ebf382", "event": "deterministic_validation", "monotonic_ms": 22536.274070999978, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "6c43a7ebf382", "event": "validation_end", "monotonic_ms": 22536.284265999995, "released": true}
+{"request_id": "6c43a7ebf382", "event": "answer_released", "monotonic_ms": 22536.30227299999}
+{"request_id": "6c43a7ebf382", "event": "completed", "monotonic_ms": 22536.318291999974, "status": "ok"}
+{"request_id": "d6e8d82a2ec5", "event": "arrival", "monotonic_ms": 27839.34758099997, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "d6e8d82a2ec5", "event": "queue_exit", "monotonic_ms": 27839.465972999962}
+{"request_id": "d6e8d82a2ec5", "event": "retrieval_start", "monotonic_ms": 27839.48161500001, "expanded": false}
+{"request_id": "d6e8d82a2ec5", "event": "retrieval_end", "monotonic_ms": 27843.423035, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "d6e8d82a2ec5", "event": "model_start", "monotonic_ms": 27843.560528000013, "purpose": "draft", "attempt": 0}
+{"request_id": "d6e8d82a2ec5", "event": "provider_first_token", "monotonic_ms": 27943.238401999963, "purpose": "draft", "attempt": 0}
+{"request_id": "d6e8d82a2ec5", "event": "model_end", "monotonic_ms": 28058.251935999975, "purpose": "draft", "attempt": 0, "duration_ms": 214.55151600002864, "error": null}
+{"request_id": "d6e8d82a2ec5", "event": "validation_start", "monotonic_ms": 28058.27743399999}
+{"request_id": "d6e8d82a2ec5", "event": "deterministic_validation", "monotonic_ms": 28058.340440999986, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "d6e8d82a2ec5", "event": "validation_end", "monotonic_ms": 28058.353313999985, "released": true}
+{"request_id": "d6e8d82a2ec5", "event": "answer_released", "monotonic_ms": 28058.37189799996}
+{"request_id": "d6e8d82a2ec5", "event": "completed", "monotonic_ms": 28058.39408899999, "status": "ok"}
+{"request_id": "b23c9a1fafec", "event": "arrival", "monotonic_ms": 33339.32711, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "b23c9a1fafec", "event": "queue_exit", "monotonic_ms": 33339.441249999996}
+{"request_id": "b23c9a1fafec", "event": "retrieval_start", "monotonic_ms": 33339.731524, "expanded": false}
+{"request_id": "b23c9a1fafec", "event": "retrieval_end", "monotonic_ms": 33341.43791700001, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "b23c9a1fafec", "event": "model_start", "monotonic_ms": 33341.507952999964, "purpose": "draft", "attempt": 0}
+{"request_id": "b23c9a1fafec", "event": "provider_first_token", "monotonic_ms": 33440.23032999996, "purpose": "draft", "attempt": 0}
+{"request_id": "b23c9a1fafec", "event": "model_end", "monotonic_ms": 33541.64634, "purpose": "draft", "attempt": 0, "duration_ms": 199.9392929999999, "error": null}
+{"request_id": "b23c9a1fafec", "event": "validation_start", "monotonic_ms": 33541.67652199999}
+{"request_id": "b23c9a1fafec", "event": "deterministic_validation", "monotonic_ms": 33541.742252000004, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "b23c9a1fafec", "event": "validation_end", "monotonic_ms": 33541.75548299997, "released": true}
+{"request_id": "b23c9a1fafec", "event": "answer_released", "monotonic_ms": 33541.777735999975}
+{"request_id": "b23c9a1fafec", "event": "completed", "monotonic_ms": 33541.799949999986, "status": "ok"}
+{"request_id": "313bf713d6ae", "event": "arrival", "monotonic_ms": 38839.90313300001, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "313bf713d6ae", "event": "queue_exit", "monotonic_ms": 38840.031248}
+{"request_id": "313bf713d6ae", "event": "retrieval_start", "monotonic_ms": 38840.047787999996, "expanded": false}
+{"request_id": "313bf713d6ae", "event": "retrieval_end", "monotonic_ms": 38842.39452399999, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "313bf713d6ae", "event": "model_start", "monotonic_ms": 38842.51766799997, "purpose": "draft", "attempt": 0}
+{"request_id": "313bf713d6ae", "event": "provider_first_token", "monotonic_ms": 38940.793515, "purpose": "draft", "attempt": 0}
+{"request_id": "313bf713d6ae", "event": "model_end", "monotonic_ms": 39055.081779999964, "purpose": "draft", "attempt": 0, "duration_ms": 212.43822299999238, "error": null}
+{"request_id": "313bf713d6ae", "event": "validation_start", "monotonic_ms": 39055.108233999985}
+{"request_id": "313bf713d6ae", "event": "deterministic_validation", "monotonic_ms": 39055.177077999986, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "313bf713d6ae", "event": "validation_end", "monotonic_ms": 39055.18945799997, "released": true}
+{"request_id": "313bf713d6ae", "event": "answer_released", "monotonic_ms": 39055.20727099997}
+{"request_id": "313bf713d6ae", "event": "completed", "monotonic_ms": 39055.229258999985, "status": "ok"}
+{"request_id": "9f9018245fba", "event": "arrival", "monotonic_ms": 44339.31162799996, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "9f9018245fba", "event": "queue_exit", "monotonic_ms": 44339.467910999985}
+{"request_id": "9f9018245fba", "event": "retrieval_start", "monotonic_ms": 44339.49599199997, "expanded": false}
+{"request_id": "9f9018245fba", "event": "retrieval_end", "monotonic_ms": 44342.92489199999, "ids": ["2410.00037v1:p10:c2", "1706.03762v7:p8:c1", "1706.03762v7:p14:c0"]}
+{"request_id": "9f9018245fba", "event": "model_start", "monotonic_ms": 44343.040616, "purpose": "draft", "attempt": 0}
+{"request_id": "9f9018245fba", "event": "provider_first_token", "monotonic_ms": 44439.68012299996, "purpose": "draft", "attempt": 0}
+{"request_id": "9f9018245fba", "event": "model_end", "monotonic_ms": 44540.96362299998, "purpose": "draft", "attempt": 0, "duration_ms": 197.75279099997078, "error": null}
+{"request_id": "9f9018245fba", "event": "validation_start", "monotonic_ms": 44540.99261799996}
+{"request_id": "9f9018245fba", "event": "deterministic_validation", "monotonic_ms": 44541.04140099997, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "9f9018245fba", "event": "validation_end", "monotonic_ms": 44541.054525999985, "released": true}
+{"request_id": "9f9018245fba", "event": "answer_released", "monotonic_ms": 44541.074229000005}
+{"request_id": "9f9018245fba", "event": "completed", "monotonic_ms": 44541.096745999996, "status": "ok"}
+{"request_id": "4a21a82f4506", "event": "arrival", "monotonic_ms": 49840.14781899998, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "4a21a82f4506", "event": "queue_exit", "monotonic_ms": 49840.257587999986}
+{"request_id": "4a21a82f4506", "event": "retrieval_start", "monotonic_ms": 49840.275625, "expanded": false}
+{"request_id": "4a21a82f4506", "event": "retrieval_end", "monotonic_ms": 49842.74544499999, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "4a21a82f4506", "event": "model_start", "monotonic_ms": 49842.92122699998, "purpose": "draft", "attempt": 0}
+{"request_id": "4a21a82f4506", "event": "provider_first_token", "monotonic_ms": 49944.61082999999, "purpose": "draft", "attempt": 0}
+{"request_id": "4a21a82f4506", "event": "model_end", "monotonic_ms": 50063.410325000004, "purpose": "draft", "attempt": 0, "duration_ms": 220.40551100002403, "error": null}
+{"request_id": "4a21a82f4506", "event": "validation_start", "monotonic_ms": 50063.428286999966}
+{"request_id": "4a21a82f4506", "event": "deterministic_validation", "monotonic_ms": 50063.48492500001, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "4a21a82f4506", "event": "validation_end", "monotonic_ms": 50063.49685499998, "released": true}
+{"request_id": "4a21a82f4506", "event": "answer_released", "monotonic_ms": 50063.51088399998}
+{"request_id": "4a21a82f4506", "event": "completed", "monotonic_ms": 50063.527485000006, "status": "ok"}
+{"request_id": "run", "event": "scenario_config", "monotonic_ms": 50066.729355, "scenario": "burst", "config": {"rpm": 12, "tpm": 100000, "rpd": 10000, "tpd": 2000000, "window_s": 60, "day_s": 86400, "base_s": 0.08, "prefill_s_per_token": 1e-05, "output_tokens_per_s": 1500, "slowdown_per_inflight": 0.15, "slow_probability": 0.08, "slow_multiplier": 8, "failure_probability": 0.03, "seed": 7, "daily_exhausted": false, "provenance": "ASSUMED: synthetic smoke-test parameters, not real calibration"}}
+{"request_id": "f6a7ad9eaf72", "event": "arrival", "monotonic_ms": 50094.331374999965, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "f6a7ad9eaf72", "event": "queue_exit", "monotonic_ms": 50094.393190999996}
+{"request_id": "f6a7ad9eaf72", "event": "retrieval_start", "monotonic_ms": 50094.40238899998, "expanded": false}
+{"request_id": "f6a7ad9eaf72", "event": "retrieval_end", "monotonic_ms": 50095.69267500001, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "f6a7ad9eaf72", "event": "model_start", "monotonic_ms": 50095.743589999984, "purpose": "draft", "attempt": 0}
+{"request_id": "3f62ec50585c", "event": "arrival", "monotonic_ms": 50096.25019499998, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "3f62ec50585c", "event": "queue_exit", "monotonic_ms": 50096.27352999996}
+{"request_id": "3f62ec50585c", "event": "retrieval_start", "monotonic_ms": 50096.28020599996, "expanded": false}
+{"request_id": "3f62ec50585c", "event": "retrieval_end", "monotonic_ms": 50097.933328000014, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "3f62ec50585c", "event": "model_start", "monotonic_ms": 50097.990780999964, "purpose": "draft", "attempt": 0}
+{"request_id": "201dc89b488f", "event": "arrival", "monotonic_ms": 50098.38036100001, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "468c2590647e", "event": "arrival", "monotonic_ms": 50098.41823599998, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "a100e4ce2cba", "event": "arrival", "monotonic_ms": 50098.440041, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "31a6f0e8505c", "event": "arrival", "monotonic_ms": 50098.45816899997, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "bef5540b2777", "event": "arrival", "monotonic_ms": 50098.479843999994, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "bad828760dd3", "event": "arrival", "monotonic_ms": 50098.49490199997, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "08b4de189a0f", "event": "arrival", "monotonic_ms": 50098.509852, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "08b4de189a0f", "event": "completed", "monotonic_ms": 50098.516287, "status": "rate_limited"}
+{"request_id": "d82cb9a83c47", "event": "arrival", "monotonic_ms": 50098.55896900001, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "d82cb9a83c47", "event": "completed", "monotonic_ms": 50098.565581, "status": "rate_limited"}
+{"request_id": "f6a7ad9eaf72", "event": "provider_first_token", "monotonic_ms": 50193.182753999965, "purpose": "draft", "attempt": 0}
+{"request_id": "f6a7ad9eaf72", "event": "model_end", "monotonic_ms": 50282.391447999995, "purpose": "draft", "attempt": 0, "duration_ms": 186.54648900002258, "error": null}
+{"request_id": "f6a7ad9eaf72", "event": "validation_start", "monotonic_ms": 50282.41275599998}
+{"request_id": "f6a7ad9eaf72", "event": "deterministic_validation", "monotonic_ms": 50282.45613600001, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "f6a7ad9eaf72", "event": "validation_end", "monotonic_ms": 50282.466038, "released": true}
+{"request_id": "f6a7ad9eaf72", "event": "answer_released", "monotonic_ms": 50282.48122499997}
+{"request_id": "f6a7ad9eaf72", "event": "completed", "monotonic_ms": 50282.50416099996, "status": "ok"}
+{"request_id": "201dc89b488f", "event": "queue_exit", "monotonic_ms": 50282.592894}
+{"request_id": "201dc89b488f", "event": "retrieval_start", "monotonic_ms": 50282.600997999965, "expanded": false}
+{"request_id": "201dc89b488f", "event": "retrieval_end", "monotonic_ms": 50285.978623999996, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "201dc89b488f", "event": "model_start", "monotonic_ms": 50286.073127999996, "purpose": "draft", "attempt": 0}
+{"request_id": "201dc89b488f", "event": "provider_first_token", "monotonic_ms": 50396.92852100001, "purpose": "draft", "attempt": 0}
+{"request_id": "201dc89b488f", "event": "model_end", "monotonic_ms": 50537.64697599996, "purpose": "draft", "attempt": 0, "duration_ms": 251.36903000003485, "error": null}
+{"request_id": "201dc89b488f", "event": "validation_start", "monotonic_ms": 50537.675891999985}
+{"request_id": "201dc89b488f", "event": "deterministic_validation", "monotonic_ms": 50537.75910799999, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "201dc89b488f", "event": "validation_end", "monotonic_ms": 50537.78419700001, "released": true}
+{"request_id": "201dc89b488f", "event": "answer_released", "monotonic_ms": 50537.806158999956}
+{"request_id": "201dc89b488f", "event": "completed", "monotonic_ms": 50537.84135000001, "status": "ok"}
+{"request_id": "468c2590647e", "event": "queue_exit", "monotonic_ms": 50538.025645}
+{"request_id": "468c2590647e", "event": "retrieval_start", "monotonic_ms": 50538.03932099998, "expanded": false}
+{"request_id": "468c2590647e", "event": "retrieval_end", "monotonic_ms": 50541.62756099999, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "468c2590647e", "event": "model_start", "monotonic_ms": 50541.727815, "purpose": "draft", "attempt": 0}
+{"request_id": "468c2590647e", "event": "provider_first_token", "monotonic_ms": 50653.495894, "purpose": "draft", "attempt": 0}
+{"request_id": "468c2590647e", "event": "model_end", "monotonic_ms": 50792.626917999994, "purpose": "draft", "attempt": 0, "duration_ms": 250.78717100001313, "error": null}
+{"request_id": "468c2590647e", "event": "validation_start", "monotonic_ms": 50792.64932399997}
+{"request_id": "468c2590647e", "event": "deterministic_validation", "monotonic_ms": 50792.70299299998, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "468c2590647e", "event": "validation_end", "monotonic_ms": 50792.714934, "released": true}
+{"request_id": "468c2590647e", "event": "answer_released", "monotonic_ms": 50792.73258199998}
+{"request_id": "468c2590647e", "event": "completed", "monotonic_ms": 50792.757177999985, "status": "ok"}
+{"request_id": "a100e4ce2cba", "event": "queue_exit", "monotonic_ms": 50792.87510199998}
+{"request_id": "a100e4ce2cba", "event": "retrieval_start", "monotonic_ms": 50792.88870699998, "expanded": false}
+{"request_id": "a100e4ce2cba", "event": "retrieval_end", "monotonic_ms": 50795.97460100001, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "a100e4ce2cba", "event": "model_start", "monotonic_ms": 50796.06779400001, "purpose": "draft", "attempt": 0}
+{"request_id": "a100e4ce2cba", "event": "provider_first_token", "monotonic_ms": 50908.00646999998, "purpose": "draft", "attempt": 0}
+{"request_id": "3f62ec50585c", "event": "provider_first_token", "monotonic_ms": 50956.66686499999, "purpose": "draft", "attempt": 0}
+{"request_id": "a100e4ce2cba", "event": "model_end", "monotonic_ms": 51026.96997199996, "purpose": "draft", "attempt": 0, "duration_ms": 230.75312399998893, "error": null}
+{"request_id": "a100e4ce2cba", "event": "validation_start", "monotonic_ms": 51026.99942499999}
+{"request_id": "a100e4ce2cba", "event": "deterministic_validation", "monotonic_ms": 51027.057173999994, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "a100e4ce2cba", "event": "validation_end", "monotonic_ms": 51027.06682600001, "released": true}
+{"request_id": "a100e4ce2cba", "event": "answer_released", "monotonic_ms": 51027.08733200001}
+{"request_id": "a100e4ce2cba", "event": "completed", "monotonic_ms": 51027.11115599999, "status": "ok"}
+{"request_id": "31a6f0e8505c", "event": "queue_exit", "monotonic_ms": 51027.200322}
+{"request_id": "31a6f0e8505c", "event": "retrieval_start", "monotonic_ms": 51027.21581599997, "expanded": false}
+{"request_id": "31a6f0e8505c", "event": "retrieval_end", "monotonic_ms": 51030.44287099999, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "31a6f0e8505c", "event": "model_start", "monotonic_ms": 51030.54730700001, "purpose": "draft", "attempt": 0}
+{"request_id": "31a6f0e8505c", "event": "provider_first_token", "monotonic_ms": 51144.82444099997, "purpose": "draft", "attempt": 0}
+{"request_id": "31a6f0e8505c", "event": "model_end", "monotonic_ms": 51292.583500999965, "purpose": "draft", "attempt": 0, "duration_ms": 261.9040569999811, "error": null}
+{"request_id": "31a6f0e8505c", "event": "validation_start", "monotonic_ms": 51292.61018699998}
+{"request_id": "31a6f0e8505c", "event": "deterministic_validation", "monotonic_ms": 51292.67833699998, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "31a6f0e8505c", "event": "validation_end", "monotonic_ms": 51292.69110999996, "released": true}
+{"request_id": "31a6f0e8505c", "event": "answer_released", "monotonic_ms": 51292.71269499998}
+{"request_id": "31a6f0e8505c", "event": "completed", "monotonic_ms": 51292.740019000004, "status": "ok"}
+{"request_id": "bef5540b2777", "event": "queue_exit", "monotonic_ms": 51292.84583699996}
+{"request_id": "bef5540b2777", "event": "retrieval_start", "monotonic_ms": 51292.90699699999, "expanded": false}
+{"request_id": "bef5540b2777", "event": "retrieval_end", "monotonic_ms": 51295.98476000001, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "bef5540b2777", "event": "model_start", "monotonic_ms": 51296.11356599997, "purpose": "draft", "attempt": 0}
+{"request_id": "bef5540b2777", "event": "provider_first_token", "monotonic_ms": 51409.737674999975, "purpose": "draft", "attempt": 0}
+{"request_id": "bef5540b2777", "event": "model_end", "monotonic_ms": 51543.984574999966, "purpose": "draft", "attempt": 0, "duration_ms": 247.69982499998378, "error": null}
+{"request_id": "bef5540b2777", "event": "validation_start", "monotonic_ms": 51544.01169699997}
+{"request_id": "bef5540b2777", "event": "deterministic_validation", "monotonic_ms": 51544.08390800001, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "bef5540b2777", "event": "validation_end", "monotonic_ms": 51544.096965, "released": true}
+{"request_id": "bef5540b2777", "event": "answer_released", "monotonic_ms": 51544.11819999995}
+{"request_id": "bef5540b2777", "event": "completed", "monotonic_ms": 51544.14443799999, "status": "ok"}
+{"request_id": "bad828760dd3", "event": "queue_exit", "monotonic_ms": 51544.25198999996}
+{"request_id": "bad828760dd3", "event": "retrieval_start", "monotonic_ms": 51544.263094999966, "expanded": false}
+{"request_id": "bad828760dd3", "event": "retrieval_end", "monotonic_ms": 51546.412188999966, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "bad828760dd3", "event": "model_start", "monotonic_ms": 51546.52428700001, "purpose": "draft", "attempt": 0}
+{"request_id": "bad828760dd3", "event": "provider_first_token", "monotonic_ms": 51658.748619999984, "purpose": "draft", "attempt": 0}
+{"request_id": "bad828760dd3", "event": "model_end", "monotonic_ms": 51802.98251900001, "purpose": "draft", "attempt": 0, "duration_ms": 256.2738100000388, "error": null}
+{"request_id": "bad828760dd3", "event": "validation_start", "monotonic_ms": 51803.01525499999}
+{"request_id": "bad828760dd3", "event": "deterministic_validation", "monotonic_ms": 51803.086604999975, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "bad828760dd3", "event": "validation_end", "monotonic_ms": 51803.10424300001, "released": true}
+{"request_id": "bad828760dd3", "event": "answer_released", "monotonic_ms": 51803.124652000006}
+{"request_id": "bad828760dd3", "event": "completed", "monotonic_ms": 51803.14547199998, "status": "ok"}
+{"request_id": "3f62ec50585c", "event": "model_end", "monotonic_ms": 51930.10484999997, "purpose": "draft", "attempt": 0, "duration_ms": 1831.9497449999744, "error": null}
+{"request_id": "3f62ec50585c", "event": "validation_start", "monotonic_ms": 51930.14093900001}
+{"request_id": "3f62ec50585c", "event": "deterministic_validation", "monotonic_ms": 51930.22434699998, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "3f62ec50585c", "event": "validation_end", "monotonic_ms": 51930.238101999974, "released": true}
+{"request_id": "3f62ec50585c", "event": "answer_released", "monotonic_ms": 51930.25938799997}
+{"request_id": "3f62ec50585c", "event": "completed", "monotonic_ms": 51930.284858999985, "status": "ok"}
+{"request_id": "run", "event": "scenario_config", "monotonic_ms": 51932.998467000005, "scenario": "sustained_overload", "config": {"rpm": 12, "tpm": 100000, "rpd": 10000, "tpd": 2000000, "window_s": 60, "day_s": 86400, "base_s": 0.08, "prefill_s_per_token": 1e-05, "output_tokens_per_s": 1500, "slowdown_per_inflight": 0.15, "slow_probability": 0.08, "slow_multiplier": 8, "failure_probability": 0.03, "seed": 7, "daily_exhausted": false, "provenance": "ASSUMED: synthetic smoke-test parameters, not real calibration"}}
+{"request_id": "9b368f255222", "event": "arrival", "monotonic_ms": 51981.03046, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "9b368f255222", "event": "queue_exit", "monotonic_ms": 51981.11517899997}
+{"request_id": "9b368f255222", "event": "retrieval_start", "monotonic_ms": 51981.12739800001, "expanded": false}
+{"request_id": "9b368f255222", "event": "retrieval_end", "monotonic_ms": 51983.30427100001, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "9b368f255222", "event": "model_start", "monotonic_ms": 51983.412385999996, "purpose": "draft", "attempt": 0}
+{"request_id": "9b368f255222", "event": "provider_first_token", "monotonic_ms": 52078.946484999964, "purpose": "draft", "attempt": 0}
+{"request_id": "9b368f255222", "event": "model_end", "monotonic_ms": 52170.41441099997, "purpose": "draft", "attempt": 0, "duration_ms": 186.84392700004082, "error": null}
+{"request_id": "9b368f255222", "event": "validation_start", "monotonic_ms": 52170.45805199996}
+{"request_id": "9b368f255222", "event": "deterministic_validation", "monotonic_ms": 52170.527565999975, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "9b368f255222", "event": "validation_end", "monotonic_ms": 52170.54476499999, "released": true}
+{"request_id": "9b368f255222", "event": "answer_released", "monotonic_ms": 52170.58089}
+{"request_id": "9b368f255222", "event": "completed", "monotonic_ms": 52170.60681199996, "status": "ok"}
+{"request_id": "be177dc1f7b3", "event": "arrival", "monotonic_ms": 52231.75542999996, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "be177dc1f7b3", "event": "queue_exit", "monotonic_ms": 52231.90189899998}
+{"request_id": "be177dc1f7b3", "event": "retrieval_start", "monotonic_ms": 52231.927619999966, "expanded": false}
+{"request_id": "be177dc1f7b3", "event": "retrieval_end", "monotonic_ms": 52236.73809799999, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "be177dc1f7b3", "event": "model_start", "monotonic_ms": 52236.91358599996, "purpose": "draft", "attempt": 0}
+{"request_id": "4628c80b9e57", "event": "arrival", "monotonic_ms": 52482.22345199997, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "4628c80b9e57", "event": "queue_exit", "monotonic_ms": 52482.34515499996}
+{"request_id": "4628c80b9e57", "event": "retrieval_start", "monotonic_ms": 52482.360951999966, "expanded": false}
+{"request_id": "4628c80b9e57", "event": "retrieval_end", "monotonic_ms": 52486.43332899996, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "4628c80b9e57", "event": "model_start", "monotonic_ms": 52486.553383, "purpose": "draft", "attempt": 0}
+{"request_id": "4628c80b9e57", "event": "provider_first_token", "monotonic_ms": 52597.83780199996, "purpose": "draft", "attempt": 0}
+{"request_id": "4d8e77622c89", "event": "arrival", "monotonic_ms": 52730.81180599996, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "4628c80b9e57", "event": "model_end", "monotonic_ms": 52738.102798999986, "purpose": "draft", "attempt": 0, "duration_ms": 251.44229500000392, "error": null}
+{"request_id": "4628c80b9e57", "event": "validation_start", "monotonic_ms": 52738.13026699997}
+{"request_id": "4628c80b9e57", "event": "deterministic_validation", "monotonic_ms": 52738.20376399999, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "4628c80b9e57", "event": "validation_end", "monotonic_ms": 52738.21599899998, "released": true}
+{"request_id": "4628c80b9e57", "event": "answer_released", "monotonic_ms": 52738.233911999996}
+{"request_id": "4628c80b9e57", "event": "completed", "monotonic_ms": 52738.25890500001, "status": "ok"}
+{"request_id": "4d8e77622c89", "event": "queue_exit", "monotonic_ms": 52738.37271499997}
+{"request_id": "4d8e77622c89", "event": "retrieval_start", "monotonic_ms": 52738.38309999996, "expanded": false}
+{"request_id": "4d8e77622c89", "event": "retrieval_end", "monotonic_ms": 52741.96134099998, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "4d8e77622c89", "event": "model_start", "monotonic_ms": 52742.065773999966, "purpose": "draft", "attempt": 0}
+{"request_id": "4d8e77622c89", "event": "provider_first_token", "monotonic_ms": 52855.81520799997, "purpose": "draft", "attempt": 0}
+{"request_id": "518965679345", "event": "arrival", "monotonic_ms": 52981.34626499996, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "be177dc1f7b3", "event": "provider_first_token", "monotonic_ms": 52984.49125999997, "purpose": "draft", "attempt": 0}
+{"request_id": "4d8e77622c89", "event": "model_end", "monotonic_ms": 52993.95738999999, "purpose": "draft", "attempt": 0, "duration_ms": 251.73911199999566, "error": null}
+{"request_id": "4d8e77622c89", "event": "validation_start", "monotonic_ms": 52993.98421899997}
+{"request_id": "4d8e77622c89", "event": "deterministic_validation", "monotonic_ms": 52994.05909799998, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "4d8e77622c89", "event": "validation_end", "monotonic_ms": 52994.072792, "released": true}
+{"request_id": "4d8e77622c89", "event": "answer_released", "monotonic_ms": 52994.09359800001}
+{"request_id": "4d8e77622c89", "event": "completed", "monotonic_ms": 52994.121507999975, "status": "ok"}
+{"request_id": "518965679345", "event": "queue_exit", "monotonic_ms": 52994.23747200001}
+{"request_id": "518965679345", "event": "retrieval_start", "monotonic_ms": 52994.24811899996, "expanded": false}
+{"request_id": "518965679345", "event": "retrieval_end", "monotonic_ms": 52998.045339999975, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "518965679345", "event": "model_start", "monotonic_ms": 52998.14684399996, "purpose": "draft", "attempt": 0}
+{"request_id": "518965679345", "event": "provider_first_token", "monotonic_ms": 53110.76385000001, "purpose": "draft", "attempt": 0}
+{"request_id": "518965679345", "event": "model_end", "monotonic_ms": 53228.432458999974, "purpose": "draft", "attempt": 0, "duration_ms": 230.1615990000414, "error": null}
+{"request_id": "518965679345", "event": "validation_start", "monotonic_ms": 53228.46354500001}
+{"request_id": "518965679345", "event": "deterministic_validation", "monotonic_ms": 53228.543462, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "518965679345", "event": "validation_end", "monotonic_ms": 53228.55725, "released": true}
+{"request_id": "518965679345", "event": "answer_released", "monotonic_ms": 53228.575181999986}
+{"request_id": "518965679345", "event": "completed", "monotonic_ms": 53228.598596999975, "status": "ok"}
+{"request_id": "214feb75d5d6", "event": "arrival", "monotonic_ms": 53231.35102699996, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "214feb75d5d6", "event": "queue_exit", "monotonic_ms": 53231.42275099997}
+{"request_id": "214feb75d5d6", "event": "retrieval_start", "monotonic_ms": 53231.43528899999, "expanded": false}
+{"request_id": "214feb75d5d6", "event": "retrieval_end", "monotonic_ms": 53234.781322, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "214feb75d5d6", "event": "model_start", "monotonic_ms": 53234.936957000005, "purpose": "draft", "attempt": 0}
+{"request_id": "214feb75d5d6", "event": "provider_first_token", "monotonic_ms": 53348.70286500001, "purpose": "draft", "attempt": 0}
+{"request_id": "fba76a1d8db5", "event": "arrival", "monotonic_ms": 53481.68450099996, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "214feb75d5d6", "event": "model_end", "monotonic_ms": 53495.11463799996, "purpose": "draft", "attempt": 0, "duration_ms": 260.0657330000331, "error": null}
+{"request_id": "214feb75d5d6", "event": "validation_start", "monotonic_ms": 53495.14070599997}
+{"request_id": "214feb75d5d6", "event": "deterministic_validation", "monotonic_ms": 53495.21509699997, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "214feb75d5d6", "event": "validation_end", "monotonic_ms": 53495.22802799998, "released": true}
+{"request_id": "214feb75d5d6", "event": "answer_released", "monotonic_ms": 53495.24630999997}
+{"request_id": "214feb75d5d6", "event": "completed", "monotonic_ms": 53495.276786999966, "status": "ok"}
+{"request_id": "fba76a1d8db5", "event": "queue_exit", "monotonic_ms": 53495.391444999994}
+{"request_id": "fba76a1d8db5", "event": "retrieval_start", "monotonic_ms": 53495.40197799996, "expanded": false}
+{"request_id": "fba76a1d8db5", "event": "retrieval_end", "monotonic_ms": 53498.43838499999, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "fba76a1d8db5", "event": "model_start", "monotonic_ms": 53498.55221499996, "purpose": "draft", "attempt": 0}
+{"request_id": "fba76a1d8db5", "event": "provider_first_token", "monotonic_ms": 53613.34639699999, "purpose": "draft", "attempt": 0}
+{"request_id": "a1311d8f2bf3", "event": "arrival", "monotonic_ms": 53731.28683199997, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "fba76a1d8db5", "event": "model_end", "monotonic_ms": 53738.74909199998, "purpose": "draft", "attempt": 0, "duration_ms": 240.08577899996908, "error": null}
+{"request_id": "fba76a1d8db5", "event": "validation_start", "monotonic_ms": 53738.77276399997}
+{"request_id": "fba76a1d8db5", "event": "deterministic_validation", "monotonic_ms": 53738.83796499996, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "fba76a1d8db5", "event": "validation_end", "monotonic_ms": 53738.90123199999, "released": true}
+{"request_id": "fba76a1d8db5", "event": "answer_released", "monotonic_ms": 53738.925271999964}
+{"request_id": "fba76a1d8db5", "event": "completed", "monotonic_ms": 53738.952764999965, "status": "ok"}
+{"request_id": "a1311d8f2bf3", "event": "queue_exit", "monotonic_ms": 53739.05716299998}
+{"request_id": "a1311d8f2bf3", "event": "retrieval_start", "monotonic_ms": 53739.067681999986, "expanded": false}
+{"request_id": "a1311d8f2bf3", "event": "retrieval_end", "monotonic_ms": 53741.31529499999, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "a1311d8f2bf3", "event": "model_start", "monotonic_ms": 53741.44542699998, "purpose": "draft", "attempt": 0}
+{"request_id": "be177dc1f7b3", "event": "model_end", "monotonic_ms": 53830.46523799999, "purpose": "draft", "attempt": 0, "duration_ms": 1593.4326130000045, "error": null}
+{"request_id": "be177dc1f7b3", "event": "validation_start", "monotonic_ms": 53830.490937999966}
+{"request_id": "be177dc1f7b3", "event": "deterministic_validation", "monotonic_ms": 53830.56169099996, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "be177dc1f7b3", "event": "validation_end", "monotonic_ms": 53830.573899, "released": true}
+{"request_id": "be177dc1f7b3", "event": "answer_released", "monotonic_ms": 53830.59263199999}
+{"request_id": "be177dc1f7b3", "event": "completed", "monotonic_ms": 53830.61378299999, "status": "ok"}
+{"request_id": "a1311d8f2bf3", "event": "provider_first_token", "monotonic_ms": 53855.13645999998, "purpose": "draft", "attempt": 0}
+{"request_id": "8e34f5012a22", "event": "arrival", "monotonic_ms": 53981.31440200001, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "8e34f5012a22", "event": "queue_exit", "monotonic_ms": 53981.40254599997}
+{"request_id": "8e34f5012a22", "event": "retrieval_start", "monotonic_ms": 53981.417653, "expanded": false}
+{"request_id": "8e34f5012a22", "event": "retrieval_end", "monotonic_ms": 53984.71259299998, "ids": ["2410.00037v1:p10:c2", "1706.03762v7:p8:c1", "1706.03762v7:p14:c0"]}
+{"request_id": "8e34f5012a22", "event": "model_start", "monotonic_ms": 53984.83418999996, "purpose": "draft", "attempt": 0}
+{"request_id": "a1311d8f2bf3", "event": "model_end", "monotonic_ms": 54002.431770999974, "purpose": "draft", "attempt": 0, "duration_ms": 260.88505699999587, "error": null}
+{"request_id": "a1311d8f2bf3", "event": "validation_start", "monotonic_ms": 54002.45450699998}
+{"request_id": "a1311d8f2bf3", "event": "deterministic_validation", "monotonic_ms": 54002.52700699997, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "a1311d8f2bf3", "event": "validation_end", "monotonic_ms": 54002.53981999998, "released": true}
+{"request_id": "a1311d8f2bf3", "event": "answer_released", "monotonic_ms": 54002.562056999974}
+{"request_id": "a1311d8f2bf3", "event": "completed", "monotonic_ms": 54002.58946599996, "status": "ok"}
+{"request_id": "8e34f5012a22", "event": "provider_first_token", "monotonic_ms": 54095.474685, "purpose": "draft", "attempt": 0}
+{"request_id": "8e34f5012a22", "event": "model_end", "monotonic_ms": 54226.48485999997, "purpose": "draft", "attempt": 0, "duration_ms": 241.53308199998946, "error": null}
+{"request_id": "8e34f5012a22", "event": "validation_start", "monotonic_ms": 54226.50961599999}
+{"request_id": "8e34f5012a22", "event": "deterministic_validation", "monotonic_ms": 54226.56835999999, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "8e34f5012a22", "event": "validation_end", "monotonic_ms": 54226.58171699999, "released": true}
+{"request_id": "8e34f5012a22", "event": "answer_released", "monotonic_ms": 54226.601034999985}
+{"request_id": "8e34f5012a22", "event": "completed", "monotonic_ms": 54226.623959, "status": "ok"}
+{"request_id": "a48990769361", "event": "arrival", "monotonic_ms": 54231.34955299997, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "a48990769361", "event": "queue_exit", "monotonic_ms": 54231.41778899998}
+{"request_id": "a48990769361", "event": "retrieval_start", "monotonic_ms": 54231.4318, "expanded": false}
+{"request_id": "a48990769361", "event": "retrieval_end", "monotonic_ms": 54234.13044399996, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "a48990769361", "event": "model_start", "monotonic_ms": 54234.24783600001, "purpose": "draft", "attempt": 0}
+{"request_id": "a48990769361", "event": "provider_first_token", "monotonic_ms": 54334.334487999964, "purpose": "draft", "attempt": 0}
+{"request_id": "a48990769361", "event": "model_end", "monotonic_ms": 54452.79985100001, "purpose": "draft", "attempt": 0, "duration_ms": 218.40698500000144, "error": null}
+{"request_id": "a48990769361", "event": "validation_start", "monotonic_ms": 54452.83731699999}
+{"request_id": "a48990769361", "event": "deterministic_validation", "monotonic_ms": 54452.97362299999, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "a48990769361", "event": "validation_end", "monotonic_ms": 54452.99236699998, "released": true}
+{"request_id": "a48990769361", "event": "answer_released", "monotonic_ms": 54453.014486999964}
+{"request_id": "a48990769361", "event": "completed", "monotonic_ms": 54453.04082299998, "status": "ok"}
+{"request_id": "02ae9812b077", "event": "arrival", "monotonic_ms": 54480.74405, "question": "What similarity measure does the Dynamic Chunking routing module use?"}
+{"request_id": "02ae9812b077", "event": "queue_exit", "monotonic_ms": 54480.822668999965}
+{"request_id": "02ae9812b077", "event": "retrieval_start", "monotonic_ms": 54480.83746399999, "expanded": false}
+{"request_id": "02ae9812b077", "event": "retrieval_end", "monotonic_ms": 54484.019491999956, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "02ae9812b077", "event": "model_start", "monotonic_ms": 54484.14483699997, "purpose": "draft", "attempt": 0}
+{"request_id": "00f0e07c0769", "event": "arrival", "monotonic_ms": 54731.491002999974, "question": "Is Dynamic Chunking fixed-size passage splitting for a retrieval database?"}
+{"request_id": "00f0e07c0769", "event": "queue_exit", "monotonic_ms": 54731.60788899998}
+{"request_id": "00f0e07c0769", "event": "retrieval_start", "monotonic_ms": 54731.62298, "expanded": false}
+{"request_id": "00f0e07c0769", "event": "retrieval_end", "monotonic_ms": 54735.055472999986, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p22:c3"]}
+{"request_id": "00f0e07c0769", "event": "model_start", "monotonic_ms": 54735.189893999974, "purpose": "draft", "attempt": 0}
+{"request_id": "00f0e07c0769", "event": "provider_first_token", "monotonic_ms": 54851.56376399999, "purpose": "draft", "attempt": 0}
+{"request_id": "27ebe960f2f6", "event": "arrival", "monotonic_ms": 54980.63411999999, "question": "What Groq free-tier requests-per-day quota do these three papers recommend for this assistant?"}
+{"request_id": "00f0e07c0769", "event": "model_end", "monotonic_ms": 55005.92678800001, "purpose": "draft", "attempt": 0, "duration_ms": 270.56336699996564, "error": null}
+{"request_id": "00f0e07c0769", "event": "validation_start", "monotonic_ms": 55005.95674799996}
+{"request_id": "00f0e07c0769", "event": "deterministic_validation", "monotonic_ms": 55006.02885000001, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "00f0e07c0769", "event": "validation_end", "monotonic_ms": 55006.041063, "released": true}
+{"request_id": "00f0e07c0769", "event": "answer_released", "monotonic_ms": 55006.05844}
+{"request_id": "00f0e07c0769", "event": "completed", "monotonic_ms": 55006.08376599996, "status": "ok"}
+{"request_id": "27ebe960f2f6", "event": "queue_exit", "monotonic_ms": 55006.193910999966}
+{"request_id": "27ebe960f2f6", "event": "retrieval_start", "monotonic_ms": 55006.20441299998, "expanded": false}
+{"request_id": "27ebe960f2f6", "event": "retrieval_end", "monotonic_ms": 55009.828740999976, "ids": ["2410.00037v1:p27:c2", "2507.07955v2:p1:c3", "2410.00037v1:p63:c0"]}
+{"request_id": "27ebe960f2f6", "event": "model_start", "monotonic_ms": 55009.981261999994, "purpose": "draft", "attempt": 0}
+{"request_id": "27ebe960f2f6", "event": "model_end", "monotonic_ms": 55013.80132700001, "purpose": "draft", "attempt": 0, "duration_ms": 3.7461489999941477, "error": "{\"error\":{\"message\":\"minute quota exhausted\",\"type\":\"rate_limit_error\"}}"}
+{"request_id": "27ebe960f2f6", "event": "completed", "monotonic_ms": 55013.896601999986, "status": "rate_limited"}
+{"request_id": "2fed44e17a80", "event": "arrival", "monotonic_ms": 55231.533426, "question": "What is the private API key of the authors of Attention Is All You Need?"}
+{"request_id": "2fed44e17a80", "event": "queue_exit", "monotonic_ms": 55231.65230999996}
+{"request_id": "2fed44e17a80", "event": "retrieval_start", "monotonic_ms": 55231.66831999998, "expanded": false}
+{"request_id": "2fed44e17a80", "event": "retrieval_end", "monotonic_ms": 55235.378949999984, "ids": ["2410.00037v1:p63:c0", "1706.03762v7:p1:c0", "2410.00037v1:p65:c1"]}
+{"request_id": "2fed44e17a80", "event": "completed", "monotonic_ms": 55235.56635899996, "status": "rate_limited"}
+{"request_id": "02ae9812b077", "event": "provider_first_token", "monotonic_ms": 55257.76436499996, "purpose": "draft", "attempt": 0}
+{"request_id": "d8fd8229eca8", "event": "arrival", "monotonic_ms": 55481.42397699996, "question": "What exact p99 latency will this Relay deployment achieve tomorrow with 100 simultaneous users?"}
+{"request_id": "d8fd8229eca8", "event": "queue_exit", "monotonic_ms": 55481.528729999976}
+{"request_id": "d8fd8229eca8", "event": "retrieval_start", "monotonic_ms": 55481.54425899997, "expanded": false}
+{"request_id": "d8fd8229eca8", "event": "retrieval_end", "monotonic_ms": 55485.46988599998, "ids": ["2410.00037v1:p24:c2", "2410.00037v1:p31:c3", "2410.00037v1:p41:c2"]}
+{"request_id": "d8fd8229eca8", "event": "completed", "monotonic_ms": 55485.70790100001, "status": "rate_limited"}
+{"request_id": "25c9582b3c5d", "event": "arrival", "monotonic_ms": 55730.824219, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "25c9582b3c5d", "event": "queue_exit", "monotonic_ms": 55730.94811900001}
+{"request_id": "25c9582b3c5d", "event": "retrieval_start", "monotonic_ms": 55730.96257200001, "expanded": false}
+{"request_id": "25c9582b3c5d", "event": "retrieval_end", "monotonic_ms": 55733.22050899998, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "25c9582b3c5d", "event": "completed", "monotonic_ms": 55733.41352299997, "status": "rate_limited"}
+{"request_id": "032a1a467ea3", "event": "arrival", "monotonic_ms": 55981.55743299998, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "032a1a467ea3", "event": "queue_exit", "monotonic_ms": 55981.649258000005}
+{"request_id": "032a1a467ea3", "event": "retrieval_start", "monotonic_ms": 55981.66066799996, "expanded": false}
+{"request_id": "032a1a467ea3", "event": "retrieval_end", "monotonic_ms": 55984.78416799998, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "032a1a467ea3", "event": "completed", "monotonic_ms": 55984.94923599998, "status": "rate_limited"}
+{"request_id": "02ae9812b077", "event": "model_end", "monotonic_ms": 56066.72757000001, "purpose": "draft", "attempt": 0, "duration_ms": 1582.4736670000448, "error": null}
+{"request_id": "02ae9812b077", "event": "validation_start", "monotonic_ms": 56066.75026799997}
+{"request_id": "02ae9812b077", "event": "deterministic_validation", "monotonic_ms": 56066.81626199998, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "02ae9812b077", "event": "validation_end", "monotonic_ms": 56066.827461999994, "released": true}
+{"request_id": "02ae9812b077", "event": "answer_released", "monotonic_ms": 56066.843798999966}
+{"request_id": "02ae9812b077", "event": "completed", "monotonic_ms": 56066.90748599999, "status": "ok"}
+{"request_id": "f84be6113d74", "event": "arrival", "monotonic_ms": 56231.69736199998, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "f84be6113d74", "event": "queue_exit", "monotonic_ms": 56231.79152699999}
+{"request_id": "f84be6113d74", "event": "retrieval_start", "monotonic_ms": 56231.80441400001, "expanded": false}
+{"request_id": "f84be6113d74", "event": "retrieval_end", "monotonic_ms": 56235.274190999975, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "f84be6113d74", "event": "completed", "monotonic_ms": 56235.434086, "status": "rate_limited"}
+{"request_id": "d0ad3c20763c", "event": "arrival", "monotonic_ms": 56486.208261, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "d0ad3c20763c", "event": "queue_exit", "monotonic_ms": 56486.31563599997}
+{"request_id": "d0ad3c20763c", "event": "retrieval_start", "monotonic_ms": 56486.40763200001, "expanded": false}
+{"request_id": "d0ad3c20763c", "event": "retrieval_end", "monotonic_ms": 56490.40173899999, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "d0ad3c20763c", "event": "completed", "monotonic_ms": 56490.58890099997, "status": "rate_limited"}
+{"request_id": "46ce4bd59572", "event": "arrival", "monotonic_ms": 56731.28843899997, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "46ce4bd59572", "event": "queue_exit", "monotonic_ms": 56731.399195999984}
+{"request_id": "46ce4bd59572", "event": "retrieval_start", "monotonic_ms": 56731.41484199999, "expanded": false}
+{"request_id": "46ce4bd59572", "event": "retrieval_end", "monotonic_ms": 56735.07386, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "46ce4bd59572", "event": "completed", "monotonic_ms": 56735.228753, "status": "rate_limited"}
+{"request_id": "f15ab31c0d0d", "event": "arrival", "monotonic_ms": 56981.910720999964, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "f15ab31c0d0d", "event": "queue_exit", "monotonic_ms": 56982.02788699996}
+{"request_id": "f15ab31c0d0d", "event": "retrieval_start", "monotonic_ms": 56982.04398299998, "expanded": false}
+{"request_id": "f15ab31c0d0d", "event": "retrieval_end", "monotonic_ms": 56985.83330700001, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "f15ab31c0d0d", "event": "completed", "monotonic_ms": 56986.04288499996, "status": "rate_limited"}
+{"request_id": "abc06e34830e", "event": "arrival", "monotonic_ms": 57231.747781999955, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "abc06e34830e", "event": "queue_exit", "monotonic_ms": 57231.90185099997}
+{"request_id": "abc06e34830e", "event": "retrieval_start", "monotonic_ms": 57231.92434099997, "expanded": false}
+{"request_id": "abc06e34830e", "event": "retrieval_end", "monotonic_ms": 57234.80925399997, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "abc06e34830e", "event": "completed", "monotonic_ms": 57235.02578399996, "status": "rate_limited"}
+{"request_id": "42b3fe09bd7a", "event": "arrival", "monotonic_ms": 57481.667314999984, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "42b3fe09bd7a", "event": "queue_exit", "monotonic_ms": 57481.773288}
+{"request_id": "42b3fe09bd7a", "event": "retrieval_start", "monotonic_ms": 57481.789434000006, "expanded": false}
+{"request_id": "42b3fe09bd7a", "event": "retrieval_end", "monotonic_ms": 57484.10789600001, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "42b3fe09bd7a", "event": "completed", "monotonic_ms": 57484.34288199997, "status": "rate_limited"}
+{"request_id": "1ac51292ed04", "event": "arrival", "monotonic_ms": 57731.15939299999, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "1ac51292ed04", "event": "queue_exit", "monotonic_ms": 57731.27148099997}
+{"request_id": "1ac51292ed04", "event": "retrieval_start", "monotonic_ms": 57731.286995, "expanded": false}
+{"request_id": "1ac51292ed04", "event": "retrieval_end", "monotonic_ms": 57734.886388000006, "ids": ["2410.00037v1:p10:c2", "1706.03762v7:p8:c1", "1706.03762v7:p14:c0"]}
+{"request_id": "1ac51292ed04", "event": "completed", "monotonic_ms": 57735.053590999996, "status": "rate_limited"}
+{"request_id": "f8970e086542", "event": "arrival", "monotonic_ms": 57981.72091699996, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "f8970e086542", "event": "queue_exit", "monotonic_ms": 57981.82537399998}
+{"request_id": "f8970e086542", "event": "retrieval_start", "monotonic_ms": 57981.841481, "expanded": false}
+{"request_id": "f8970e086542", "event": "retrieval_end", "monotonic_ms": 57984.33952099998, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "f8970e086542", "event": "completed", "monotonic_ms": 57984.510007999976, "status": "rate_limited"}
+{"request_id": "c4a3597603bd", "event": "arrival", "monotonic_ms": 58231.142540999994, "question": "What similarity measure does the Dynamic Chunking routing module use?"}
+{"request_id": "c4a3597603bd", "event": "queue_exit", "monotonic_ms": 58231.251541000005}
+{"request_id": "c4a3597603bd", "event": "retrieval_start", "monotonic_ms": 58231.26848800001, "expanded": false}
+{"request_id": "c4a3597603bd", "event": "retrieval_end", "monotonic_ms": 58234.32853099996, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "c4a3597603bd", "event": "completed", "monotonic_ms": 58234.481447000006, "status": "rate_limited"}
+{"request_id": "60a231167f10", "event": "arrival", "monotonic_ms": 58481.14574099998, "question": "Is Dynamic Chunking fixed-size passage splitting for a retrieval database?"}
+{"request_id": "60a231167f10", "event": "queue_exit", "monotonic_ms": 58481.25476399997}
+{"request_id": "60a231167f10", "event": "retrieval_start", "monotonic_ms": 58481.27230799997, "expanded": false}
+{"request_id": "60a231167f10", "event": "retrieval_end", "monotonic_ms": 58484.603462999985, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p22:c3"]}
+{"request_id": "60a231167f10", "event": "completed", "monotonic_ms": 58484.76021299996, "status": "rate_limited"}
+{"request_id": "08b09e9b1678", "event": "arrival", "monotonic_ms": 58731.493909, "question": "What Groq free-tier requests-per-day quota do these three papers recommend for this assistant?"}
+{"request_id": "08b09e9b1678", "event": "queue_exit", "monotonic_ms": 58731.60816899997}
+{"request_id": "08b09e9b1678", "event": "retrieval_start", "monotonic_ms": 58731.62353399999, "expanded": false}
+{"request_id": "08b09e9b1678", "event": "retrieval_end", "monotonic_ms": 58735.421303999996, "ids": ["2410.00037v1:p27:c2", "2507.07955v2:p1:c3", "2410.00037v1:p63:c0"]}
+{"request_id": "08b09e9b1678", "event": "completed", "monotonic_ms": 58735.59179299997, "status": "rate_limited"}
+{"request_id": "1c65d662b724", "event": "arrival", "monotonic_ms": 58981.24914900001, "question": "What is the private API key of the authors of Attention Is All You Need?"}
+{"request_id": "1c65d662b724", "event": "queue_exit", "monotonic_ms": 58981.356360000005}
+{"request_id": "1c65d662b724", "event": "retrieval_start", "monotonic_ms": 58981.37276, "expanded": false}
+{"request_id": "1c65d662b724", "event": "retrieval_end", "monotonic_ms": 58984.94601099998, "ids": ["2410.00037v1:p63:c0", "1706.03762v7:p1:c0", "2410.00037v1:p65:c1"]}
+{"request_id": "1c65d662b724", "event": "completed", "monotonic_ms": 58985.117065999984, "status": "rate_limited"}
+{"request_id": "cce1c73b9ac6", "event": "arrival", "monotonic_ms": 59231.759769000004, "question": "What exact p99 latency will this Relay deployment achieve tomorrow with 100 simultaneous users?"}
+{"request_id": "cce1c73b9ac6", "event": "queue_exit", "monotonic_ms": 59231.93934400001}
+{"request_id": "cce1c73b9ac6", "event": "retrieval_start", "monotonic_ms": 59231.968112, "expanded": false}
+{"request_id": "cce1c73b9ac6", "event": "retrieval_end", "monotonic_ms": 59235.764845000005, "ids": ["2410.00037v1:p24:c2", "2410.00037v1:p31:c3", "2410.00037v1:p41:c2"]}
+{"request_id": "cce1c73b9ac6", "event": "completed", "monotonic_ms": 59235.99398199997, "status": "rate_limited"}
+{"request_id": "67f8b69dc4ef", "event": "arrival", "monotonic_ms": 59481.60109599996, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "67f8b69dc4ef", "event": "queue_exit", "monotonic_ms": 59481.729298000006}
+{"request_id": "67f8b69dc4ef", "event": "retrieval_start", "monotonic_ms": 59481.746955, "expanded": false}
+{"request_id": "67f8b69dc4ef", "event": "retrieval_end", "monotonic_ms": 59484.611061999996, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "67f8b69dc4ef", "event": "completed", "monotonic_ms": 59484.77630999997, "status": "rate_limited"}
+{"request_id": "3d3eb3dbc961", "event": "arrival", "monotonic_ms": 59731.51121799998, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "3d3eb3dbc961", "event": "queue_exit", "monotonic_ms": 59731.624001000004}
+{"request_id": "3d3eb3dbc961", "event": "retrieval_start", "monotonic_ms": 59731.63881099998, "expanded": false}
+{"request_id": "3d3eb3dbc961", "event": "retrieval_end", "monotonic_ms": 59736.107306000005, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "3d3eb3dbc961", "event": "completed", "monotonic_ms": 59736.27644699997, "status": "rate_limited"}
+{"request_id": "1978d5274840", "event": "arrival", "monotonic_ms": 59981.03777299997, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "1978d5274840", "event": "queue_exit", "monotonic_ms": 59981.43861299997}
+{"request_id": "1978d5274840", "event": "retrieval_start", "monotonic_ms": 59981.60469099997, "expanded": false}
+{"request_id": "1978d5274840", "event": "retrieval_end", "monotonic_ms": 59985.98103699999, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "1978d5274840", "event": "completed", "monotonic_ms": 59986.12512099999, "status": "rate_limited"}
+{"request_id": "b6f83df6679f", "event": "arrival", "monotonic_ms": 60240.56411399999, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "b6f83df6679f", "event": "queue_exit", "monotonic_ms": 60240.66907499997}
+{"request_id": "b6f83df6679f", "event": "retrieval_start", "monotonic_ms": 60240.683751000004, "expanded": false}
+{"request_id": "b6f83df6679f", "event": "retrieval_end", "monotonic_ms": 60244.49764899998, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "b6f83df6679f", "event": "completed", "monotonic_ms": 60244.665276999964, "status": "rate_limited"}
+{"request_id": "49b684e6fe56", "event": "arrival", "monotonic_ms": 60482.36011899996, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "49b684e6fe56", "event": "queue_exit", "monotonic_ms": 60482.477960999975}
+{"request_id": "49b684e6fe56", "event": "retrieval_start", "monotonic_ms": 60482.492879000005, "expanded": false}
+{"request_id": "49b684e6fe56", "event": "retrieval_end", "monotonic_ms": 60486.27515800001, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "49b684e6fe56", "event": "completed", "monotonic_ms": 60486.47627700001, "status": "rate_limited"}
+{"request_id": "a7498c0d2378", "event": "arrival", "monotonic_ms": 60731.117864999986, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "a7498c0d2378", "event": "queue_exit", "monotonic_ms": 60731.210976}
+{"request_id": "a7498c0d2378", "event": "retrieval_start", "monotonic_ms": 60731.22176999999, "expanded": false}
+{"request_id": "a7498c0d2378", "event": "retrieval_end", "monotonic_ms": 60733.38786400001, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "a7498c0d2378", "event": "completed", "monotonic_ms": 60733.49325399999, "status": "rate_limited"}
+{"request_id": "2ec230b66ca5", "event": "arrival", "monotonic_ms": 60981.17840800001, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "2ec230b66ca5", "event": "queue_exit", "monotonic_ms": 60981.28686199999}
+{"request_id": "2ec230b66ca5", "event": "retrieval_start", "monotonic_ms": 60981.298184999956, "expanded": false}
+{"request_id": "2ec230b66ca5", "event": "retrieval_end", "monotonic_ms": 60983.16029099999, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "2ec230b66ca5", "event": "completed", "monotonic_ms": 60983.26079499998, "status": "rate_limited"}
+{"request_id": "18fa0c101479", "event": "arrival", "monotonic_ms": 61230.93264699997, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "18fa0c101479", "event": "queue_exit", "monotonic_ms": 61231.04466499996}
+{"request_id": "18fa0c101479", "event": "retrieval_start", "monotonic_ms": 61231.05930700001, "expanded": false}
+{"request_id": "18fa0c101479", "event": "retrieval_end", "monotonic_ms": 61233.16082499997, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "18fa0c101479", "event": "completed", "monotonic_ms": 61233.315475999974, "status": "rate_limited"}
+{"request_id": "874f3dce2a17", "event": "arrival", "monotonic_ms": 61481.23117199998, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "874f3dce2a17", "event": "queue_exit", "monotonic_ms": 61481.35007799999}
+{"request_id": "874f3dce2a17", "event": "retrieval_start", "monotonic_ms": 61481.36546999996, "expanded": false}
+{"request_id": "874f3dce2a17", "event": "retrieval_end", "monotonic_ms": 61484.68901000001, "ids": ["2410.00037v1:p10:c2", "1706.03762v7:p8:c1", "1706.03762v7:p14:c0"]}
+{"request_id": "874f3dce2a17", "event": "completed", "monotonic_ms": 61484.835084999984, "status": "rate_limited"}
+{"request_id": "b3b224b3ca33", "event": "arrival", "monotonic_ms": 61731.54459299997, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "b3b224b3ca33", "event": "queue_exit", "monotonic_ms": 61731.66051099997}
+{"request_id": "b3b224b3ca33", "event": "retrieval_start", "monotonic_ms": 61731.675357999964, "expanded": false}
+{"request_id": "b3b224b3ca33", "event": "retrieval_end", "monotonic_ms": 61734.14777799996, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "b3b224b3ca33", "event": "completed", "monotonic_ms": 61734.308758, "status": "rate_limited"}
+{"request_id": "80093a9c5d03", "event": "arrival", "monotonic_ms": 61981.01018899996, "question": "What similarity measure does the Dynamic Chunking routing module use?"}
+{"request_id": "80093a9c5d03", "event": "queue_exit", "monotonic_ms": 61981.18497499996}
+{"request_id": "80093a9c5d03", "event": "retrieval_start", "monotonic_ms": 61981.20325899998, "expanded": false}
+{"request_id": "80093a9c5d03", "event": "retrieval_end", "monotonic_ms": 61984.15514999999, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "80093a9c5d03", "event": "completed", "monotonic_ms": 61984.323211, "status": "rate_limited"}
+{"request_id": "80935482ca07", "event": "arrival", "monotonic_ms": 62231.04890100001, "question": "Is Dynamic Chunking fixed-size passage splitting for a retrieval database?"}
+{"request_id": "80935482ca07", "event": "queue_exit", "monotonic_ms": 62231.161290999975}
+{"request_id": "80935482ca07", "event": "retrieval_start", "monotonic_ms": 62231.181107, "expanded": false}
+{"request_id": "80935482ca07", "event": "retrieval_end", "monotonic_ms": 62234.84118299996, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p22:c3"]}
+{"request_id": "80935482ca07", "event": "completed", "monotonic_ms": 62235.06112699999, "status": "rate_limited"}
+{"request_id": "282c32ca1ae5", "event": "arrival", "monotonic_ms": 62484.722654, "question": "What Groq free-tier requests-per-day quota do these three papers recommend for this assistant?"}
+{"request_id": "282c32ca1ae5", "event": "queue_exit", "monotonic_ms": 62485.33381699997}
+{"request_id": "282c32ca1ae5", "event": "retrieval_start", "monotonic_ms": 62486.00280099998, "expanded": false}
+{"request_id": "282c32ca1ae5", "event": "retrieval_end", "monotonic_ms": 62508.174182999996, "ids": ["2410.00037v1:p27:c2", "2507.07955v2:p1:c3", "2410.00037v1:p63:c0"]}
+{"request_id": "282c32ca1ae5", "event": "completed", "monotonic_ms": 62508.43909399998, "status": "rate_limited"}
+{"request_id": "4fde4b910d1f", "event": "arrival", "monotonic_ms": 62731.19075799997, "question": "What is the private API key of the authors of Attention Is All You Need?"}
+{"request_id": "4fde4b910d1f", "event": "queue_exit", "monotonic_ms": 62731.29423500001}
+{"request_id": "4fde4b910d1f", "event": "retrieval_start", "monotonic_ms": 62731.30927699998, "expanded": false}
+{"request_id": "4fde4b910d1f", "event": "retrieval_end", "monotonic_ms": 62734.785994999984, "ids": ["2410.00037v1:p63:c0", "1706.03762v7:p1:c0", "2410.00037v1:p65:c1"]}
+{"request_id": "4fde4b910d1f", "event": "completed", "monotonic_ms": 62734.99061000001, "status": "rate_limited"}
+{"request_id": "ffe2d9c81e6f", "event": "arrival", "monotonic_ms": 62981.70296399997, "question": "What exact p99 latency will this Relay deployment achieve tomorrow with 100 simultaneous users?"}
+{"request_id": "ffe2d9c81e6f", "event": "queue_exit", "monotonic_ms": 62981.805001}
+{"request_id": "ffe2d9c81e6f", "event": "retrieval_start", "monotonic_ms": 62981.821457999955, "expanded": false}
+{"request_id": "ffe2d9c81e6f", "event": "retrieval_end", "monotonic_ms": 62985.75425899997, "ids": ["2410.00037v1:p24:c2", "2410.00037v1:p31:c3", "2410.00037v1:p41:c2"]}
+{"request_id": "ffe2d9c81e6f", "event": "completed", "monotonic_ms": 62985.95275700001, "status": "rate_limited"}
+{"request_id": "9f57f2118db9", "event": "arrival", "monotonic_ms": 63231.619986, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "9f57f2118db9", "event": "queue_exit", "monotonic_ms": 63231.71809999997}
+{"request_id": "9f57f2118db9", "event": "retrieval_start", "monotonic_ms": 63231.73384699999, "expanded": false}
+{"request_id": "9f57f2118db9", "event": "retrieval_end", "monotonic_ms": 63234.90462699999, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "9f57f2118db9", "event": "completed", "monotonic_ms": 63235.06147699999, "status": "rate_limited"}
+{"request_id": "44ce74730366", "event": "arrival", "monotonic_ms": 63481.77314899999, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "44ce74730366", "event": "queue_exit", "monotonic_ms": 63481.93006999997}
+{"request_id": "44ce74730366", "event": "retrieval_start", "monotonic_ms": 63481.95099599996, "expanded": false}
+{"request_id": "44ce74730366", "event": "retrieval_end", "monotonic_ms": 63485.98608499998, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "44ce74730366", "event": "completed", "monotonic_ms": 63486.13662999998, "status": "rate_limited"}
+{"request_id": "c45b761b6606", "event": "arrival", "monotonic_ms": 63731.81218999997, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "c45b761b6606", "event": "queue_exit", "monotonic_ms": 63731.990645999984}
+{"request_id": "c45b761b6606", "event": "retrieval_start", "monotonic_ms": 63732.01361399998, "expanded": false}
+{"request_id": "c45b761b6606", "event": "retrieval_end", "monotonic_ms": 63736.617513, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "c45b761b6606", "event": "completed", "monotonic_ms": 63736.77794099996, "status": "rate_limited"}
+{"request_id": "83d6989f2a42", "event": "arrival", "monotonic_ms": 63981.57532699997, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "83d6989f2a42", "event": "queue_exit", "monotonic_ms": 63981.690593}
+{"request_id": "83d6989f2a42", "event": "retrieval_start", "monotonic_ms": 63981.70542499997, "expanded": false}
+{"request_id": "83d6989f2a42", "event": "retrieval_end", "monotonic_ms": 63985.846596999974, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "83d6989f2a42", "event": "completed", "monotonic_ms": 63986.12559899999, "status": "rate_limited"}
+{"request_id": "752e4cad93e1", "event": "arrival", "monotonic_ms": 64231.81130899997, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "752e4cad93e1", "event": "queue_exit", "monotonic_ms": 64231.95712500001}
+{"request_id": "752e4cad93e1", "event": "retrieval_start", "monotonic_ms": 64231.97479199996, "expanded": false}
+{"request_id": "752e4cad93e1", "event": "retrieval_end", "monotonic_ms": 64235.68120499999, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "752e4cad93e1", "event": "completed", "monotonic_ms": 64235.84405299999, "status": "rate_limited"}
+{"request_id": "4f1036008548", "event": "arrival", "monotonic_ms": 64481.578342999965, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "4f1036008548", "event": "queue_exit", "monotonic_ms": 64481.68203299997}
+{"request_id": "4f1036008548", "event": "retrieval_start", "monotonic_ms": 64481.69677300001, "expanded": false}
+{"request_id": "4f1036008548", "event": "retrieval_end", "monotonic_ms": 64485.506923, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "4f1036008548", "event": "completed", "monotonic_ms": 64485.766351, "status": "rate_limited"}
+{"request_id": "98d66ddb4e61", "event": "arrival", "monotonic_ms": 64731.487114999996, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "98d66ddb4e61", "event": "queue_exit", "monotonic_ms": 64731.602646999985}
+{"request_id": "98d66ddb4e61", "event": "retrieval_start", "monotonic_ms": 64731.618228, "expanded": false}
+{"request_id": "98d66ddb4e61", "event": "retrieval_end", "monotonic_ms": 64734.80146200001, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "98d66ddb4e61", "event": "completed", "monotonic_ms": 64735.02721699998, "status": "rate_limited"}
+{"request_id": "fefd2188ea7d", "event": "arrival", "monotonic_ms": 64981.72276700001, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "fefd2188ea7d", "event": "queue_exit", "monotonic_ms": 64981.88751199996}
+{"request_id": "fefd2188ea7d", "event": "retrieval_start", "monotonic_ms": 64981.90895799996, "expanded": false}
+{"request_id": "fefd2188ea7d", "event": "retrieval_end", "monotonic_ms": 64984.21439999998, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "fefd2188ea7d", "event": "completed", "monotonic_ms": 64984.365088000006, "status": "rate_limited"}
+{"request_id": "d2e16f20ae0c", "event": "arrival", "monotonic_ms": 65231.04700099998, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "d2e16f20ae0c", "event": "queue_exit", "monotonic_ms": 65231.156811999994}
+{"request_id": "d2e16f20ae0c", "event": "retrieval_start", "monotonic_ms": 65231.171270000006, "expanded": false}
+{"request_id": "d2e16f20ae0c", "event": "retrieval_end", "monotonic_ms": 65234.81478399998, "ids": ["2410.00037v1:p10:c2", "1706.03762v7:p8:c1", "1706.03762v7:p14:c0"]}
+{"request_id": "d2e16f20ae0c", "event": "completed", "monotonic_ms": 65235.021034, "status": "rate_limited"}
+{"request_id": "f388e91b3168", "event": "arrival", "monotonic_ms": 65481.734346, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "f388e91b3168", "event": "queue_exit", "monotonic_ms": 65481.84540799997}
+{"request_id": "f388e91b3168", "event": "retrieval_start", "monotonic_ms": 65481.912819000005, "expanded": false}
+{"request_id": "f388e91b3168", "event": "retrieval_end", "monotonic_ms": 65484.51818499996, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "f388e91b3168", "event": "completed", "monotonic_ms": 65484.70663299997, "status": "rate_limited"}
+{"request_id": "8e7c9a4b25d3", "event": "arrival", "monotonic_ms": 65731.50214399998, "question": "What similarity measure does the Dynamic Chunking routing module use?"}
+{"request_id": "8e7c9a4b25d3", "event": "queue_exit", "monotonic_ms": 65731.62641900001}
+{"request_id": "8e7c9a4b25d3", "event": "retrieval_start", "monotonic_ms": 65731.65259399997, "expanded": false}
+{"request_id": "8e7c9a4b25d3", "event": "retrieval_end", "monotonic_ms": 65735.08250099997, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p6:c3"]}
+{"request_id": "8e7c9a4b25d3", "event": "completed", "monotonic_ms": 65735.27863300001, "status": "rate_limited"}
+{"request_id": "7fd87f016cb7", "event": "arrival", "monotonic_ms": 66003.16551499997, "question": "Is Dynamic Chunking fixed-size passage splitting for a retrieval database?"}
+{"request_id": "7fd87f016cb7", "event": "queue_exit", "monotonic_ms": 66003.278598}
+{"request_id": "7fd87f016cb7", "event": "retrieval_start", "monotonic_ms": 66003.29391299999, "expanded": false}
+{"request_id": "7fd87f016cb7", "event": "retrieval_end", "monotonic_ms": 66007.05478999998, "ids": ["2507.07955v2:p6:c1", "2507.07955v2:p3:c0", "2507.07955v2:p22:c3"]}
+{"request_id": "7fd87f016cb7", "event": "completed", "monotonic_ms": 66007.23392499998, "status": "rate_limited"}
+{"request_id": "fe182d28abd6", "event": "arrival", "monotonic_ms": 66230.92830899998, "question": "What Groq free-tier requests-per-day quota do these three papers recommend for this assistant?"}
+{"request_id": "fe182d28abd6", "event": "queue_exit", "monotonic_ms": 66231.03403}
+{"request_id": "fe182d28abd6", "event": "retrieval_start", "monotonic_ms": 66231.04985200001, "expanded": false}
+{"request_id": "fe182d28abd6", "event": "retrieval_end", "monotonic_ms": 66234.769084, "ids": ["2410.00037v1:p27:c2", "2507.07955v2:p1:c3", "2410.00037v1:p63:c0"]}
+{"request_id": "fe182d28abd6", "event": "completed", "monotonic_ms": 66234.97526399995, "status": "rate_limited"}
+{"request_id": "1630b91e844a", "event": "arrival", "monotonic_ms": 66481.6591, "question": "What is the private API key of the authors of Attention Is All You Need?"}
+{"request_id": "1630b91e844a", "event": "queue_exit", "monotonic_ms": 66481.77593399999}
+{"request_id": "1630b91e844a", "event": "retrieval_start", "monotonic_ms": 66481.79141899999, "expanded": false}
+{"request_id": "1630b91e844a", "event": "retrieval_end", "monotonic_ms": 66485.42448, "ids": ["2410.00037v1:p63:c0", "1706.03762v7:p1:c0", "2410.00037v1:p65:c1"]}
+{"request_id": "1630b91e844a", "event": "completed", "monotonic_ms": 66485.69258699995, "status": "rate_limited"}
+{"request_id": "ab4bff5138bb", "event": "arrival", "monotonic_ms": 66731.399, "question": "What exact p99 latency will this Relay deployment achieve tomorrow with 100 simultaneous users?"}
+{"request_id": "ab4bff5138bb", "event": "queue_exit", "monotonic_ms": 66731.50207200002}
+{"request_id": "ab4bff5138bb", "event": "retrieval_start", "monotonic_ms": 66731.51788299998, "expanded": false}
+{"request_id": "ab4bff5138bb", "event": "retrieval_end", "monotonic_ms": 66735.44898699998, "ids": ["2410.00037v1:p24:c2", "2410.00037v1:p31:c3", "2410.00037v1:p41:c2"]}
+{"request_id": "ab4bff5138bb", "event": "completed", "monotonic_ms": 66735.60977199998, "status": "rate_limited"}
+{"request_id": "run", "event": "scenario_config", "monotonic_ms": 66740.307744, "scenario": "per_minute_limit_halved", "config": {"rpm": 6, "tpm": 100000, "rpd": 10000, "tpd": 2000000, "window_s": 60, "day_s": 86400, "base_s": 0.08, "prefill_s_per_token": 1e-05, "output_tokens_per_s": 1500, "slowdown_per_inflight": 0.15, "slow_probability": 0.08, "slow_multiplier": 8, "failure_probability": 0.03, "seed": 7, "daily_exhausted": false, "provenance": "ASSUMED: synthetic smoke-test parameters, not real calibration"}}
+{"request_id": "e3b52c244f27", "event": "arrival", "monotonic_ms": 66789.31727999997, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "e3b52c244f27", "event": "queue_exit", "monotonic_ms": 66789.39749599999}
+{"request_id": "e3b52c244f27", "event": "retrieval_start", "monotonic_ms": 66789.425005, "expanded": false}
+{"request_id": "e3b52c244f27", "event": "retrieval_end", "monotonic_ms": 66791.69470699997, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "e3b52c244f27", "event": "model_start", "monotonic_ms": 66791.80137999998, "purpose": "draft", "attempt": 0}
+{"request_id": "c3d544775391", "event": "arrival", "monotonic_ms": 66801.89639399998, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "c3d544775391", "event": "queue_exit", "monotonic_ms": 66801.96754499996}
+{"request_id": "c3d544775391", "event": "retrieval_start", "monotonic_ms": 66801.98016999998, "expanded": false}
+{"request_id": "c3d544775391", "event": "retrieval_end", "monotonic_ms": 66805.29321899997, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "c3d544775391", "event": "model_start", "monotonic_ms": 66805.39711199998, "purpose": "draft", "attempt": 0}
+{"request_id": "cf025c7e75b9", "event": "arrival", "monotonic_ms": 66816.82153499998, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "4cec81de2d3e", "event": "arrival", "monotonic_ms": 66831.169009, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "0d268b7a2f67", "event": "arrival", "monotonic_ms": 66846.50281899997, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "87574ee2c1c7", "event": "arrival", "monotonic_ms": 66861.82249299997, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "9eeaea663efc", "event": "arrival", "monotonic_ms": 66876.18199499996, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "e3b52c244f27", "event": "provider_first_token", "monotonic_ms": 66887.04652399998, "purpose": "draft", "attempt": 0}
+{"request_id": "568437f7e91f", "event": "arrival", "monotonic_ms": 66891.54703499997, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "cb97478891fa", "event": "arrival", "monotonic_ms": 66910.15119999998, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "cb97478891fa", "event": "completed", "monotonic_ms": 66910.189478, "status": "rate_limited"}
+{"request_id": "aa94572ab3bb", "event": "arrival", "monotonic_ms": 66921.24114000001, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "aa94572ab3bb", "event": "completed", "monotonic_ms": 66921.287049, "status": "rate_limited"}
+{"request_id": "e3b52c244f27", "event": "model_end", "monotonic_ms": 66977.83627199999, "purpose": "draft", "attempt": 0, "duration_ms": 185.9112270000196, "error": null}
+{"request_id": "e3b52c244f27", "event": "validation_start", "monotonic_ms": 66977.90557499997}
+{"request_id": "e3b52c244f27", "event": "deterministic_validation", "monotonic_ms": 66977.96690799999, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "e3b52c244f27", "event": "validation_end", "monotonic_ms": 66977.9805, "released": true}
+{"request_id": "e3b52c244f27", "event": "answer_released", "monotonic_ms": 66978.00031099995}
+{"request_id": "e3b52c244f27", "event": "completed", "monotonic_ms": 66978.02581199999, "status": "ok"}
+{"request_id": "cf025c7e75b9", "event": "queue_exit", "monotonic_ms": 66978.16731799998}
+{"request_id": "cf025c7e75b9", "event": "retrieval_start", "monotonic_ms": 66978.18419300001, "expanded": false}
+{"request_id": "cf025c7e75b9", "event": "retrieval_end", "monotonic_ms": 66982.577606, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "cf025c7e75b9", "event": "model_start", "monotonic_ms": 66982.68630299998, "purpose": "draft", "attempt": 0}
+{"request_id": "cf025c7e75b9", "event": "provider_first_token", "monotonic_ms": 67094.064677, "purpose": "draft", "attempt": 0}
+{"request_id": "cf025c7e75b9", "event": "model_end", "monotonic_ms": 67237.40421999997, "purpose": "draft", "attempt": 0, "duration_ms": 254.6012760000167, "error": null}
+{"request_id": "cf025c7e75b9", "event": "validation_start", "monotonic_ms": 67237.42921799999}
+{"request_id": "cf025c7e75b9", "event": "deterministic_validation", "monotonic_ms": 67237.50434900001, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "cf025c7e75b9", "event": "validation_end", "monotonic_ms": 67237.51749499996, "released": true}
+{"request_id": "cf025c7e75b9", "event": "answer_released", "monotonic_ms": 67237.59714699998}
+{"request_id": "cf025c7e75b9", "event": "completed", "monotonic_ms": 67237.62610899996, "status": "ok"}
+{"request_id": "4cec81de2d3e", "event": "queue_exit", "monotonic_ms": 67237.73363300001}
+{"request_id": "4cec81de2d3e", "event": "retrieval_start", "monotonic_ms": 67237.744663, "expanded": false}
+{"request_id": "4cec81de2d3e", "event": "retrieval_end", "monotonic_ms": 67241.625623, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "4cec81de2d3e", "event": "model_start", "monotonic_ms": 67241.74180199997, "purpose": "draft", "attempt": 0}
+{"request_id": "4cec81de2d3e", "event": "provider_first_token", "monotonic_ms": 67354.835153, "purpose": "draft", "attempt": 0}
+{"request_id": "4cec81de2d3e", "event": "model_end", "monotonic_ms": 67493.00519899998, "purpose": "draft", "attempt": 0, "duration_ms": 251.14852499996232, "error": null}
+{"request_id": "4cec81de2d3e", "event": "validation_start", "monotonic_ms": 67493.027465}
+{"request_id": "4cec81de2d3e", "event": "deterministic_validation", "monotonic_ms": 67493.089946, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "4cec81de2d3e", "event": "validation_end", "monotonic_ms": 67493.10054799997, "released": true}
+{"request_id": "4cec81de2d3e", "event": "answer_released", "monotonic_ms": 67493.11753299997}
+{"request_id": "4cec81de2d3e", "event": "completed", "monotonic_ms": 67493.13987, "status": "ok"}
+{"request_id": "0d268b7a2f67", "event": "queue_exit", "monotonic_ms": 67493.23032199999}
+{"request_id": "0d268b7a2f67", "event": "retrieval_start", "monotonic_ms": 67493.23857299998, "expanded": false}
+{"request_id": "0d268b7a2f67", "event": "retrieval_end", "monotonic_ms": 67496.37098699997, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "0d268b7a2f67", "event": "model_start", "monotonic_ms": 67496.460953, "purpose": "draft", "attempt": 0}
+{"request_id": "0d268b7a2f67", "event": "provider_first_token", "monotonic_ms": 67608.567258, "purpose": "draft", "attempt": 0}
+{"request_id": "c3d544775391", "event": "provider_first_token", "monotonic_ms": 67663.78856500001, "purpose": "draft", "attempt": 0}
+{"request_id": "0d268b7a2f67", "event": "model_end", "monotonic_ms": 67729.25614700001, "purpose": "draft", "attempt": 0, "duration_ms": 232.66542200002505, "error": null}
+{"request_id": "0d268b7a2f67", "event": "validation_start", "monotonic_ms": 67729.28229199999}
+{"request_id": "0d268b7a2f67", "event": "deterministic_validation", "monotonic_ms": 67729.363917, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "0d268b7a2f67", "event": "validation_end", "monotonic_ms": 67729.37739499997, "released": true}
+{"request_id": "0d268b7a2f67", "event": "answer_released", "monotonic_ms": 67729.39667700001}
+{"request_id": "0d268b7a2f67", "event": "completed", "monotonic_ms": 67729.42294999996, "status": "ok"}
+{"request_id": "87574ee2c1c7", "event": "queue_exit", "monotonic_ms": 67729.62210700002}
+{"request_id": "87574ee2c1c7", "event": "retrieval_start", "monotonic_ms": 67729.63795099997, "expanded": false}
+{"request_id": "87574ee2c1c7", "event": "retrieval_end", "monotonic_ms": 67733.14287899996, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "87574ee2c1c7", "event": "model_start", "monotonic_ms": 67733.27677499998, "purpose": "draft", "attempt": 0}
+{"request_id": "87574ee2c1c7", "event": "provider_first_token", "monotonic_ms": 67847.110166, "purpose": "draft", "attempt": 0}
+{"request_id": "87574ee2c1c7", "event": "model_end", "monotonic_ms": 67992.40694099995, "purpose": "draft", "attempt": 0, "duration_ms": 259.00276099997654, "error": null}
+{"request_id": "87574ee2c1c7", "event": "validation_start", "monotonic_ms": 67992.431619}
+{"request_id": "87574ee2c1c7", "event": "deterministic_validation", "monotonic_ms": 67992.51098299999, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "87574ee2c1c7", "event": "validation_end", "monotonic_ms": 67992.52443799998, "released": true}
+{"request_id": "87574ee2c1c7", "event": "answer_released", "monotonic_ms": 67992.54409299999}
+{"request_id": "87574ee2c1c7", "event": "completed", "monotonic_ms": 67992.57000299997, "status": "ok"}
+{"request_id": "9eeaea663efc", "event": "queue_exit", "monotonic_ms": 67992.805003}
+{"request_id": "9eeaea663efc", "event": "retrieval_start", "monotonic_ms": 67992.819048, "expanded": false}
+{"request_id": "9eeaea663efc", "event": "retrieval_end", "monotonic_ms": 67995.64976599999, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "9eeaea663efc", "event": "model_start", "monotonic_ms": 67995.77568999997, "purpose": "draft", "attempt": 0}
+{"request_id": "9eeaea663efc", "event": "model_end", "monotonic_ms": 67999.45377199998, "purpose": "draft", "attempt": 0, "duration_ms": 3.603667999982463, "error": "{\"error\":{\"message\":\"minute quota exhausted\",\"type\":\"rate_limit_error\"}}"}
+{"request_id": "9eeaea663efc", "event": "completed", "monotonic_ms": 67999.49905, "status": "rate_limited"}
+{"request_id": "568437f7e91f", "event": "queue_exit", "monotonic_ms": 67999.56966499997}
+{"request_id": "568437f7e91f", "event": "retrieval_start", "monotonic_ms": 67999.57934399998, "expanded": false}
+{"request_id": "568437f7e91f", "event": "retrieval_end", "monotonic_ms": 68001.61424599997, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "568437f7e91f", "event": "completed", "monotonic_ms": 68001.72444499999, "status": "rate_limited"}
+{"request_id": "c3d544775391", "event": "model_end", "monotonic_ms": 68635.369148, "purpose": "draft", "attempt": 0, "duration_ms": 1829.8419170000102, "error": null}
+{"request_id": "c3d544775391", "event": "validation_start", "monotonic_ms": 68635.39568099998}
+{"request_id": "c3d544775391", "event": "deterministic_validation", "monotonic_ms": 68635.47917799997, "valid": true, "reason": "structural checks passed; semantic support not guaranteed"}
+{"request_id": "c3d544775391", "event": "validation_end", "monotonic_ms": 68635.491103, "released": true}
+{"request_id": "c3d544775391", "event": "answer_released", "monotonic_ms": 68635.50880499998}
+{"request_id": "c3d544775391", "event": "completed", "monotonic_ms": 68635.53057499997, "status": "ok"}
+{"request_id": "run", "event": "scenario_config", "monotonic_ms": 68640.36903199997, "scenario": "daily_budget_exhausted", "config": {"rpm": 12, "tpm": 100000, "rpd": 10000, "tpd": 2000000, "window_s": 60, "day_s": 86400, "base_s": 0.08, "prefill_s_per_token": 1e-05, "output_tokens_per_s": 1500, "slowdown_per_inflight": 0.15, "slow_probability": 0.08, "slow_multiplier": 8, "failure_probability": 0.03, "seed": 7, "daily_exhausted": true, "provenance": "ASSUMED: synthetic smoke-test parameters, not real calibration"}}
+{"request_id": "bc82207fb574", "event": "arrival", "monotonic_ms": 68677.58516300001, "question": "How does the Transformer decoder prevent attending to subsequent positions?"}
+{"request_id": "bc82207fb574", "event": "queue_exit", "monotonic_ms": 68677.664445}
+{"request_id": "bc82207fb574", "event": "retrieval_start", "monotonic_ms": 68677.67774099996, "expanded": false}
+{"request_id": "bc82207fb574", "event": "retrieval_end", "monotonic_ms": 68679.67790199998, "ids": ["1706.03762v7:p3:c1", "1706.03762v7:p5:c1", "2410.00037v1:p35:c2"]}
+{"request_id": "bc82207fb574", "event": "model_start", "monotonic_ms": 68679.77368099998, "purpose": "draft", "attempt": 0}
+{"request_id": "f36877ead8aa", "event": "arrival", "monotonic_ms": 68680.48791000001, "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?"}
+{"request_id": "f36877ead8aa", "event": "queue_exit", "monotonic_ms": 68680.529057}
+{"request_id": "f36877ead8aa", "event": "retrieval_start", "monotonic_ms": 68680.53992399995, "expanded": false}
+{"request_id": "f36877ead8aa", "event": "retrieval_end", "monotonic_ms": 68683.11139399998, "ids": ["1706.03762v7:p4:c0", "1706.03762v7:p4:c1", "1706.03762v7:p4:c2"]}
+{"request_id": "f36877ead8aa", "event": "model_start", "monotonic_ms": 68683.187959, "purpose": "draft", "attempt": 0}
+{"request_id": "fb386b1881ef", "event": "arrival", "monotonic_ms": 68683.73588999998, "question": "What are the input/output and inner-layer dimensions of the Transformer position-wise feed-forward network?"}
+{"request_id": "4cc958760fcb", "event": "arrival", "monotonic_ms": 68683.784983, "question": "Why does Attention Is All You Need add positional encodings, and where are they added?"}
+{"request_id": "15fe14386fbe", "event": "arrival", "monotonic_ms": 68683.81223, "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?"}
+{"request_id": "f2dcb5cf3336", "event": "arrival", "monotonic_ms": 68683.83629799997, "question": "What theoretical and practical latency does the Moshi abstract report?"}
+{"request_id": "67e42f972811", "event": "arrival", "monotonic_ms": 68683.91297799996, "question": "What is the Inner Monologue method in Moshi?"}
+{"request_id": "cc4a85a4c0a6", "event": "arrival", "monotonic_ms": 68683.94436, "question": "What role does Mimi play in Moshi?"}
+{"request_id": "ea4d6e7e3fbf", "event": "arrival", "monotonic_ms": 68683.97097499996, "question": "What frame rate is listed for Moshi in its training hyperparameter table?"}
+{"request_id": "ea4d6e7e3fbf", "event": "completed", "monotonic_ms": 68683.98108899998, "status": "rate_limited"}
+{"request_id": "bc1660c0dac1", "event": "arrival", "monotonic_ms": 68684.03975699999, "question": "What two complementary modules does Dynamic Chunking introduce?"}
+{"request_id": "bc1660c0dac1", "event": "completed", "monotonic_ms": 68684.048749, "status": "rate_limited"}
+{"request_id": "bc82207fb574", "event": "model_end", "monotonic_ms": 68686.27606499995, "purpose": "draft", "attempt": 0, "duration_ms": 6.449208999981693, "error": "{\"error\":{\"message\":\"daily quota exhausted\",\"type\":\"rate_limit_error\"}}"}
+{"request_id": "bc82207fb574", "event": "completed", "monotonic_ms": 68686.304715, "status": "rate_limited"}
+{"request_id": "fb386b1881ef", "event": "queue_exit", "monotonic_ms": 68686.36066599998}
+{"request_id": "fb386b1881ef", "event": "retrieval_start", "monotonic_ms": 68686.36909599997, "expanded": false}
+{"request_id": "fb386b1881ef", "event": "retrieval_end", "monotonic_ms": 68688.77848099999, "ids": ["1706.03762v7:p5:c2", "1706.03762v7:p3:c0", "1706.03762v7:p6:c3"]}
+{"request_id": "fb386b1881ef", "event": "completed", "monotonic_ms": 68688.90619899998, "status": "rate_limited"}
+{"request_id": "4cc958760fcb", "event": "queue_exit", "monotonic_ms": 68688.97858099996}
+{"request_id": "4cc958760fcb", "event": "retrieval_start", "monotonic_ms": 68688.98724499997, "expanded": false}
+{"request_id": "4cc958760fcb", "event": "retrieval_end", "monotonic_ms": 68691.16136700001, "ids": ["1706.03762v7:p6:c0", "1706.03762v7:p6:c1", "2410.00037v1:p65:c1"]}
+{"request_id": "4cc958760fcb", "event": "completed", "monotonic_ms": 68691.24960799997, "status": "rate_limited"}
+{"request_id": "15fe14386fbe", "event": "queue_exit", "monotonic_ms": 68691.31613999997}
+{"request_id": "15fe14386fbe", "event": "retrieval_start", "monotonic_ms": 68691.32424499998, "expanded": false}
+{"request_id": "15fe14386fbe", "event": "retrieval_end", "monotonic_ms": 68693.446005, "ids": ["1706.03762v7:p8:c1", "2410.00037v1:p63:c0", "2410.00037v1:p53:c1"]}
+{"request_id": "15fe14386fbe", "event": "completed", "monotonic_ms": 68693.62831299998, "status": "rate_limited"}
+{"request_id": "f2dcb5cf3336", "event": "queue_exit", "monotonic_ms": 68694.17161299998}
+{"request_id": "f2dcb5cf3336", "event": "retrieval_start", "monotonic_ms": 68694.19079900002, "expanded": false}
+{"request_id": "f2dcb5cf3336", "event": "retrieval_end", "monotonic_ms": 68696.18537299999, "ids": ["2410.00037v1:p41:c2", "2410.00037v1:p26:c0", "2410.00037v1:p1:c0"]}
+{"request_id": "f2dcb5cf3336", "event": "completed", "monotonic_ms": 68696.27174699996, "status": "rate_limited"}
+{"request_id": "f36877ead8aa", "event": "model_end", "monotonic_ms": 68696.563588, "purpose": "draft", "attempt": 0, "duration_ms": 13.338122999982716, "error": "{\"error\":{\"message\":\"daily quota exhausted\",\"type\":\"rate_limit_error\"}}"}
+{"request_id": "f36877ead8aa", "event": "completed", "monotonic_ms": 68696.58570699999, "status": "rate_limited"}
+{"request_id": "67e42f972811", "event": "queue_exit", "monotonic_ms": 68696.637258}
+{"request_id": "67e42f972811", "event": "retrieval_start", "monotonic_ms": 68696.64456999999, "expanded": false}
+{"request_id": "67e42f972811", "event": "retrieval_end", "monotonic_ms": 68698.291767, "ids": ["2410.00037v1:p29:c2", "2410.00037v1:p41:c2", "2410.00037v1:p41:c1"]}
+{"request_id": "67e42f972811", "event": "completed", "monotonic_ms": 68698.37959199998, "status": "rate_limited"}
+{"request_id": "cc4a85a4c0a6", "event": "queue_exit", "monotonic_ms": 68698.43583299997}
+{"request_id": "cc4a85a4c0a6", "event": "retrieval_start", "monotonic_ms": 68698.44398800001, "expanded": false}
+{"request_id": "cc4a85a4c0a6", "event": "retrieval_end", "monotonic_ms": 68699.61359999997, "ids": ["2410.00037v1:p62:c0", "2410.00037v1:p63:c0", "2410.00037v1:p24:c2"]}
+{"request_id": "cc4a85a4c0a6", "event": "completed", "monotonic_ms": 68699.691718, "status": "rate_limited"}

@@ -1,0 +1,84 @@
+request_id,question_id,retrieval_setting,source,status,answer,answer_grade,review_notes
+16b27e74efca,interactive,small,real,ok,I could not produce a sufficiently supported answer from these papers.,,
+bda30cb8e1a6,q01,small,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (small); honest refusal retained
+37f59a3f0cc6,q02,small,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (small); honest refusal retained
+9cbfd9f3eccf,q03,small,real,ok,"Attention Is All You Need adds positional encodings to inject information about the relative or absolute position of tokens because the model contains no recurrence or convolution. [1706.03762v7:p6:c0]
+Evidence: “Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence.”
+
+The positional encodings are added to the input embeddings at the bottoms of the encoder and decoder stacks. [1706.03762v7:p6:c0]
+Evidence: “we add ""positional encodings"" to the input embeddings at the bottoms of the encoder and decoder stacks.”",correct,Accurate claim with verified verbatim quote from 1706.03762v7
+efb529e67fb6,q04,small,real,ok,"Attention Is All You Need uses a label‑smoothing value of 0.1 [1706.03762v7:p8:c1]
+Evidence: “Label Smoothing During training, we employed label smoothing of value ϵls = 0.1 [36].”
+
+The authors report that label‑smoothing hurts perplexity but improves accuracy and BLEU score [1706.03762v7:p8:c1]
+Evidence: “This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.”",correct,Accurate claim with verified verbatim quote from 1706.03762v7
+31b3403e3fd0,q05,small,real,ok,"Moshi has a theoretical latency of 160 ms [2410.00037v1:p26:c3]
+Evidence: “we settle on a theoretical latency of 160ms”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+3075767111d0,q06,small,real,ok,"Inner Monologue is a method that generates text tokens as a prefix to audio tokens, enabling streaming inference while improving spoken question answering performance. [2410.00037v1:p41:c2]
+Evidence: “Inner Monologue method allows designing streaming TTS and streaming ASR just by changing the delay between text and audio tokens. We believe that both Inner Monologue and multi-stream modeling will have a positive impact on speech-to-speech and audio-to-audio beyond dialogue modeling.”
+
+Using Inner Monologue almost triples Moshi’s accuracy on all benchmarks with only a marginal increase in inference cost. [2410.00037v1:p29:c2]
+Evidence: “The most striking result is the impact of Inner Monologue on Moshi’s performance, almost tripling its accuracy on all benchmarks, and significantly improving over previous work. This is remarkable as Inner Monologue only marginally increases inference cost (each multi-stream timestep requires generating 17 tokens, instead of 16 without Inner Monologue).”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+6330479890f6,q07,small,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (small); honest refusal retained
+23a9ef43300f,q08,small,real,ok,The supplied paper passages do not establish an answer to this question.,refused_wrongly,Missed supporting evidence in retrieval window (small); honest refusal retained
+24276d702ff5,q09,small,real,ok,"Dynamic Chunking introduces a routing module and a downsampler as complementary components of the chunking layer. [2507.07955v2:p3:c0]
+Evidence: “Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions.”",correct,Accurate claim with verified verbatim quote from 2507.07955v2
+75b14c7b7345,q10,small,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (small); honest refusal retained
+b4dffd158ea2,q11,small,real,ok,"Moshi does not start from a pretrained PaLM model; it starts from the pretrained Helium checkpoint. [2410.00037v1:p28:c0]
+Evidence: “The corresponding Moshi model is similar to the one mentioned above (audio-only data, no Inner Monologue) but starts from the pretrained Helium checkpoint.”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+8241d9d6b09b,q12,small,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (small); honest refusal retained
+d690f3ca0e84,q13,small,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+007756ba3061,q14,small,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+8dbb5c894cd8,q15,small,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+b773b1ebb077,q01,medium,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (medium); honest refusal retained
+e4f4f8738ce7,q02,medium,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (medium); honest refusal retained
+a1da2ca06ccb,q03,medium,real,ok,"The Transformer adds positional encodings to the input embeddings at the bottoms of the encoder and decoder stacks. [1706.03762v7:p6:c0]
+Evidence: “Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add ""positional encodings"" to the input embeddings at the bottoms of the encoder and decoder stacks.”",correct,Accurate claim with verified verbatim quote from 1706.03762v7
+2c539626450b,q04,medium,real,ok,"Attention Is All You Need uses a label‑smoothing value of 0.1 [1706.03762v7:p8:c0]
+Evidence: “During training, we employed label smoothing of value ϵls = 0.1 [36].”
+
+The paper reports that label smoothing hurts perplexity but improves accuracy and BLEU score [1706.03762v7:p8:c0]
+Evidence: “This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.”",correct,Accurate claim with verified verbatim quote from 1706.03762v7
+5dbb876421e6,q05,medium,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (medium); honest refusal retained
+cfc8eaf91bea,q06,medium,real,ok,"Inner Monologue is a method that generates text tokens as a prefix to audio tokens while remaining compatible with streaming inference. [2410.00037v1:p41:c1]
+Evidence: “We moreover show that speech-to-speech generation can be drastically improved by Inner Monologue, a new method that generates text tokens as a prefix to audio tokens, while remaining compatible with streaming inference.”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+2532a7ec360a,q07,medium,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (medium); honest refusal retained
+9db0e729afdc,q08,medium,real,ok,"Moshi’s training hyperparameter table lists a frame rate of 12.5 Hz [2410.00037v1:p8:c0]
+Evidence: “Audio cardinality - 2048 Frame rate - 12.5 Hz”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+9f855f2f29dc,q09,medium,real,ok,"Dynamic Chunking introduces a routing module and a downsampler as complementary components of its chunking layer. [2507.07955v2:p3:c0]
+Evidence: “Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions.”",correct,Accurate claim with verified verbatim quote from 2507.07955v2
+92dad814f26e,q10,medium,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (medium); honest refusal retained
+6670d7bb96b3,q11,medium,real,ok,"Moshi does not start from a pretrained PaLM model; instead it starts from the pretrained Helium checkpoint. [2410.00037v1:p28:c0]
+Evidence: “The corresponding Moshi model is similar to the one mentioned above (audio-only data, no Inner Monologue) but starts from the pretrained Helium checkpoint.”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+27afa33f11c9,q12,medium,real,ok,The supplied paper passages do not establish an answer to this question.,refused_wrongly,Missed supporting evidence in retrieval window (medium); honest refusal retained
+0886c525d7bb,q13,medium,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+5e11d17d0cf0,q14,medium,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+725d14de3c1a,q15,medium,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+851aade854f0,q01,large,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (large); honest refusal retained
+82c5a03d8ede,q02,large,real,rate_limited,,wrong,Request shed by local TPM rate limiter before outer deadline
+5e161e0993a1,q03,large,real,ok,"The Transformer adds positional encodings to the input embeddings at the bottoms of the encoder and decoder stacks. [1706.03762v7:p6:c0]
+Evidence: “Since our model contains no recurrence and no convolution, in order for the model to make use of the order of the sequence, we must inject some information about the relative or absolute position of the tokens in the sequence. To this end, we add ""positional encodings"" to the input embeddings at the bottoms of the encoder and decoder stacks.”",correct,Accurate claim with verified verbatim quote from 1706.03762v7
+71bd5f647165,q04,large,real,ok,"The Transformer uses a label‑smoothing value of 0.1. [1706.03762v7:p8:c0]
+Evidence: “During training, we employed label smoothing of value ϵls = 0.1 [36].”
+
+Label smoothing hurts perplexity but improves accuracy and BLEU score. [1706.03762v7:p8:c0]
+Evidence: “This hurts perplexity, as the model learns to be more unsure, but improves accuracy and BLEU score.”",correct,Accurate claim with verified verbatim quote from 1706.03762v7
+48f00b256537,q05,large,real,ok,I could not produce a sufficiently supported answer from these papers.,refused_wrongly,Missed supporting evidence in retrieval window (large); honest refusal retained
+5d33b56d12f2,q06,large,real,ok,"Inner Monologue is a method that generates text tokens as a prefix to audio tokens, enabling streaming TTS and ASR by adjusting the delay between text and audio tokens. [2410.00037v1:p41:c1]
+Evidence: “we show how our Inner Monologue method allows designing streaming TTS and streaming ASR just by changing the delay between text and audio tokens.”
+
+In Inner Monologue, each multi-stream timestep requires generating 17 tokens instead of 16, only marginally increasing inference cost. [2410.00037v1:p29:c1]
+Evidence: “Inner Monologue only marginally increases inference cost (each multi-stream timestep requires generating 17 tokens, instead of 16 without Inner Monologue).”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+071ef2f0033b,q07,large,real,ok,"Mimi is the neural audio codec used in Moshi, providing residual vector quantization and semantic knowledge distilled from a self‑supervised speech model. [2410.00037v1:p6:c0]
+Evidence: “a neural audio codec with residual vector quantization and with semantic knowledge distilled from a self-supervised speech model (Mimi, Section 3.3)”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+07bb4149b352,q08,large,real,ok,"The training hyperparameter table for Moshi lists the audio frame rate as 12.5 Hz [2410.00037v1:p8:c0]
+Evidence: “Audio cardinality - 2048 Frame rate - 12.5 Hz”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+d0ad9d2cff1b,q09,large,real,ok,"Dynamic Chunking introduces a routing module that dynamically draws chunk boundaries and a downsampler that selectively retains vectors based on those boundaries. [2507.07955v2:p3:c0]
+Evidence: “Key components of a chunking layer: (a) a routing module for dynamically drawing chunk boundaries, and (b) a downsampler that selectively retains vectors based on boundary indicators, reducing sequence length while preserving semantically significant positions.”",correct,Accurate claim with verified verbatim quote from 2507.07955v2
+882baf050bc0,q10,large,real,rate_limited,,wrong,Request shed by local TPM rate limiter before outer deadline
+d42c8648f498,q11,large,real,ok,"Moshi does not start from a pretrained PaLM model; it is initialized from a Helium checkpoint and pretrained only on audio data. [2410.00037v1:p28:c0]
+Evidence: “The corresponding Moshi model is similar to the one mentioned above (audio-only data, no Inner Monologue) but starts from the pretrained Helium checkpoint.”",correct,Accurate claim with verified verbatim quote from 2410.00037v1
+eecebb847806,q12,large,real,ok,The supplied paper passages do not establish an answer to this question.,refused_wrongly,Missed supporting evidence in retrieval window (large); honest refusal retained
+98956bea2462,q13,large,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+0b624a64a7b4,q14,large,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check
+2996cda93efc,q15,large,real,ok,The supplied paper passages do not establish an answer to this question.,refused_correctly,Correctly refused unanswerable plausible_unanswerable question with strict citation check

@@ -1,0 +1,12 @@
+{
+  "checked_on": "2026-11-10",
+  "source": "https://console.groq.com/docs/rate-limits",
+  "model": "openai/gpt-oss-20b",
+  "plan": "public free-tier table",
+  "rpm": 30,
+  "tpm": 8000,
+  "rpd": 1000,
+  "tpd": 200000,
+  "confidence": "documentation only; account-specific limits not observed",
+  "important": "request headers refer to RPD, token headers to TPM; no universal daily-reset timezone inferred"
+}

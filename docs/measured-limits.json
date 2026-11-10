@@ -1,0 +1,44 @@
+{
+  "Requests/day": [
+    "Requests/day",
+    "1000",
+    "Real x-ratelimit-limit-requests header; request 16b27e74efca",
+    "medium"
+  ],
+  "Tokens/min": [
+    "Tokens/min",
+    "8000",
+    "Real x-ratelimit-limit-tokens header; request 16b27e74efca",
+    "medium"
+  ],
+  "Requests/min": [
+    "Requests/min",
+    "30 (documented, not observed)",
+    "Public documentation for openai/gpt-oss-20b, not account measurement",
+    "low"
+  ],
+  "Tokens/day": [
+    "Tokens/day",
+    "200000 (documented, not observed)",
+    "Public documentation for openai/gpt-oss-20b, not account measurement",
+    "low"
+  ],
+  "Requests in flight": [
+    "Requests in flight",
+    ">= 1 overlapping accepted calls (not a provider cap)",
+    "Accepted-call spans compared only within a single clock session",
+    "low"
+  ],
+  "Limit response": [
+    "Limit response",
+    "not measured",
+    "0 observed real 429s; raw bodies preserved",
+    "low"
+  ],
+  "Recovery time": [
+    "Recovery time",
+    "not measured",
+    "Successful recovery probe includes response time; not an exact reset measurement",
+    "low"
+  ]
+}

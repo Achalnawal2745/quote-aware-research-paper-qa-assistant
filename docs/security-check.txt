@@ -1,0 +1,1 @@
+Reconstruction check: no Groq key was supplied or used. No gsk_/sk- style credential patterns were found in packaged text artifacts. .env, private budget ledgers, dependency/cache files and generated egg-info are excluded from the ZIP. This is not a universal secret detector; inspect again before sharing.

@@ -1,0 +1,200 @@
+[
+  {
+    "id": "q01",
+    "question": "How does the Transformer decoder prevent attending to subsequent positions?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 3,
+    "reference": "Decoder self-attention masking plus offset output embeddings ensures dependence only on earlier outputs.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "masking",
+      "subsequent"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q02",
+    "question": "Why are Transformer dot-product attention scores divided by the square root of the key dimension?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 4,
+    "reference": "Large dot products can push softmax into regions with small gradients; scaling counteracts this.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "small gradients"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q03",
+    "question": "Why does Attention Is All You Need add positional encodings, and where are they added?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 6,
+    "reference": "No recurrence or convolution; inject order information at bottoms of encoder and decoder stacks.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "positional encodings",
+      "bottoms"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q04",
+    "question": "What label-smoothing value does Attention Is All You Need use, and what trade-off does it report?",
+    "expected_refusal": false,
+    "paper": "1706.03762v7",
+    "pdf_page": 8,
+    "reference": "0.1; hurts perplexity but improves accuracy and BLEU.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "label smoothing",
+      "0.1"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q05",
+    "question": "What theoretical and practical latency does the Moshi abstract report?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 1,
+    "reference": "160 ms theoretical, 200 ms practical. These are not this assignment service latencies.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "160ms",
+      "200ms"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q06",
+    "question": "What is the Inner Monologue method in Moshi?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 1,
+    "reference": "Predict time-aligned text as a prefix to audio tokens; improves linguistic quality of generated speech.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "Inner Monologue",
+      "prefix"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q07",
+    "question": "What role does Mimi play in Moshi?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 3,
+    "reference": "Neural audio codec converting audio to discrete tokens and back with residual vector quantization.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "Mimi",
+      "residual vector quant"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q08",
+    "question": "What frame rate is listed for Moshi in its training hyperparameter table?",
+    "expected_refusal": false,
+    "paper": "2410.00037v1",
+    "pdf_page": 8,
+    "reference": "12.5 Hz; distinguish frame rate from sample rate.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "12.5 Hz"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q09",
+    "question": "What two complementary modules does Dynamic Chunking introduce?",
+    "expected_refusal": false,
+    "paper": "2507.07955v2",
+    "pdf_page": 2,
+    "reference": "Routing predicts boundaries by similarity; smoothing interpolates using router outputs to reduce uncertain-boundary effects.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "routing",
+      "smoothing"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q10",
+    "question": "What similarity measure does the Dynamic Chunking routing module use?",
+    "expected_refusal": false,
+    "paper": "2507.07955v2",
+    "pdf_page": 6,
+    "reference": "Cosine similarity between projections of adjacent encoder outputs, transformed to boundary probability.",
+    "review_status": "seed reference inspected in extracted text; recheck rendered PDF before final grading",
+    "evidence_terms": [
+      "cosine"
+    ],
+    "kind": "direct"
+  },
+  {
+    "id": "q11",
+    "question": "Does Moshi start from a pretrained PaLM model, as the AudioPaLM system does?",
+    "reference": "No. PaLM initialization describes AudioPaLM in related work. Moshi uses Helium, which the authors build from scratch.",
+    "paper": "2410.00037v1",
+    "pdf_page": 7,
+    "expected_refusal": false,
+    "evidence_terms": [
+      "from scratch",
+      "Helium"
+    ],
+    "kind": "related_work_trap",
+    "review_status": "seed reference checked against extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q12",
+    "question": "How many parallel attention heads does the Transformer base model use, and how many parameters does Moshi\u2019s text LLM Helium have?",
+    "reference": "Transformer uses h = 8 heads. Helium is a 7B-parameter text LM. Cite both papers.",
+    "paper": null,
+    "pdf_page": null,
+    "expected_refusal": false,
+    "evidence_terms": [
+      "h = 8",
+      "7B"
+    ],
+    "kind": "cross_paper",
+    "review_status": "seed reference checked against extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q13",
+    "question": "What BLEU score does the Transformer achieve on WMT English-to-Spanish translation?",
+    "reference": "No such result is established by the library; refuse the requested score.",
+    "paper": null,
+    "pdf_page": null,
+    "expected_refusal": true,
+    "evidence_terms": [],
+    "kind": "plausible_unanswerable",
+    "review_status": "seed reference checked against extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q14",
+    "question": "What word error rate does Moshi report on the Common Voice benchmark?",
+    "reference": "No Common Voice benchmark result is established by the library; refuse the requested WER.",
+    "paper": null,
+    "pdf_page": null,
+    "expected_refusal": true,
+    "evidence_terms": [],
+    "kind": "plausible_unanswerable",
+    "review_status": "seed reference checked against extracted text; recheck rendered PDF before final grading"
+  },
+  {
+    "id": "q15",
+    "question": "What accuracy does H-Net report on the GLUE benchmark?",
+    "reference": "No GLUE result is established by the library; refuse the requested accuracy.",
+    "paper": null,
+    "pdf_page": null,
+    "expected_refusal": true,
+    "evidence_terms": [],
+    "kind": "plausible_unanswerable",
+    "review_status": "seed reference checked against extracted text; recheck rendered PDF before final grading"
+  }
+]
