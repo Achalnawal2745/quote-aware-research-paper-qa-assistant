@@ -1,7 +1,0 @@
-small drafts= 15 estimated reserved tokens= 26961 largest reservation= 2111
-medium drafts= 15 estimated reserved tokens= 45850 largest reservation= 3708
-large drafts= 15 estimated reserved tokens= 66797 largest reservation= 5408
-Draft-only minimum calls: 45 ; shared one-repair cap worst case: 90
-Draft-only estimated reservations: 139608 ; account RPD/TPD entered: 1000 200000
-These are conservative byte-based estimates, NOT measured model tokens. Verifier calls add further usage.
-A prompt larger than configured TPM is rejected locally. Shrink context or choose a verified suitable model/account limit.
