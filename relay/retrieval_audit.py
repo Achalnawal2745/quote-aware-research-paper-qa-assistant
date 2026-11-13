@@ -34,6 +34,6 @@ if __name__=='__main__':
     p.add_argument('--max-tokens',type=int,default=700);a=p.parse_args()
     print('| Setting | Answerable | First-pass phrase hits | After +2 passages | Mean context estimate | Max reservation estimate | Missed |')
     print('|---|---|---|---|---|---|---|')
-    for r in audit(json.load(open(a.questions)),a.max_tokens):
+    for r in audit(json.load(open(a.questions, encoding='utf-8')),a.max_tokens):
         print('| '+' | '.join(str(v) for v in [r['setting'],r['answerable'],r['first_pass_hit'],r['after_expansion_hit'],r['mean_context_tokens_est'],r['max_reservation_est'],','.join(r['misses']) or '-'])+' |')
     print('\nPhrase coverage is a lexical proxy, not semantic support or a quality grade. Bytes/3 token estimates can over- or underestimate actual usage. Expansion fitting may remove passages counted here.')

@@ -24,7 +24,7 @@ if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--questions',default='data/questions.json')
     p.add_argument('--max-tokens',type=int,default=700);p.add_argument('--tpm',type=int,default=8000)
     p.add_argument('--rpd',type=int,default=1000);p.add_argument('--tpd',type=int,default=200000)
-    a=p.parse_args();qs=json.load(open(a.questions));rows=plan(qs,a.max_tokens,a.tpm)
+    a=p.parse_args();qs=json.load(open(a.questions, encoding='utf-8'));rows=plan(qs,a.max_tokens,a.tpm)
     for row in rows:print(json.dumps(row))
     print('Refusal-expansion planning estimate:',sum(r['refusal_expansion_plan'] for r in rows),'; token/day limit entered:',a.tpd)
     print('Every-question-expands estimate:',sum(r['every_question_expands'] for r in rows))

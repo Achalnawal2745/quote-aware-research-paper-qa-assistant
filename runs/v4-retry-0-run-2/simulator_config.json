@@ -1,0 +1,31 @@
+{
+  "experiment": "repeated_retry_comparison",
+  "repetition": 2,
+  "retry_count": 0,
+  "scenario": "retry_disabled",
+  "source": "stand-in",
+  "synthetic": true,
+  "causal_pairing": false,
+  "seed": 32,
+  "requests": 40,
+  "configuration": {
+    "rpm": 10000,
+    "tpm": 10000000,
+    "rpd": 100000,
+    "tpd": 10000000,
+    "window_s": 60,
+    "day_s": 86400,
+    "base_s": 0.12,
+    "prefill_s_per_token": 1e-05,
+    "output_tokens_per_s": 1500,
+    "slowdown_per_inflight": 0.15,
+    "slow_probability": 0.15,
+    "slow_multiplier": 8,
+    "failure_probability": 0.35,
+    "seed": 32,
+    "daily_exhausted": false,
+    "refusal_probability": 0.0,
+    "reasoning_chunks": 0,
+    "provenance": "ASSUMED retry stress test; synthetic stand-in results, not real calibration"
+  }
+}

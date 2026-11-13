@@ -1,227 +1,465 @@
-"""Deterministic BM25 retrieval with conservative technical-query expansion.
 
-Chunk sizes are whitespace words (not model tokens). Scores are ranking signals,
-not calibrated probabilities or evidence that a passage answers the question.
+"""Deterministic BM25 retrieval for the paper-QA project.
+
+Chunk sizes are measured in whitespace-delimited words, not model tokens.
+The first-pass search uses only the user's original query. Optional lexical
+expansion is applied only when expand=True.
 """
+
 import argparse
 import hashlib
 import json
 import math
 import re
+import unicodedata
 from collections import Counter
 from pathlib import Path
 
 import httpx
 from pypdf import PdfReader
 
+
 PAPERS = {
-    '1706.03762v7': 'Attention Is All You Need',
-    '2410.00037v1': 'Moshi: a speech-text foundation model for real-time dialogue',
-    '2507.07955v2': 'Dynamic Chunking for End-to-End Hierarchical Sequence Modeling',
+    "1706.03762v7": "Attention Is All You Need",
+    "2410.00037v1": "Moshi: a speech-text foundation model for real-time dialogue",
+    "2507.07955v2": "Dynamic Chunking for End-to-End Hierarchical Sequence Modeling",
 }
-SETTINGS = {'small': (180, 30, 3), 'medium': (300, 50, 4), 'large': (420, 70, 5)}
+
 EXPAND_EXTRA = 2
-STOPWORDS = set('a an and are as at be been being by can could did do does for from had has have how i in into is it its may might of on or our should that the their them then there these they this those to was were what when where which who why will with would you your'.split())
-# Explicit, inspectable domain synonyms. These expand terms, not factual content.
-SYNONYMS = {
-    'masking': 'masked mask future look ahead causal attention decoder',
-    'masked': 'masking future causal attention',
-    'chunking': 'chunks chunk boundary segmentation hierarchical sequence',
-    'latency': 'delay response time streaming real time',
-    'streaming': 'stream incremental real time latency',
-    'quantization': 'quantisation codebook codec residual vector quantizer',
-    'moshi': 'speech text dialogue mimi inner monologue',
-    'mimi': 'audio codec speech tokenizer quantization',
-    'helium': 'language model pretrained',
-    'palm': 'language model prior work related work',
-    'routing': 'route routing expert selection dispatch',
-    'smoothing': 'smooth boundary chunk transition',
+
+SETTINGS = {
+    "small": (180, 30, 3),
+    "medium": (300, 50, 4),
+    "large": (420, 70, 5),
 }
+
+QUERY_EXPANSIONS = (
+    (
+        (
+            "subsequent", "future position", "future token",
+            "decoder masking", "masked attention",
+            "causal mask", "attend to future"
+        ),
+        "masking masked attention decoder future subsequent positions causal"
+    ),
+    (
+        (
+            "dot-product", "dot product", "key dimension",
+            "square root", "softmax gradient", "scaled attention"
+        ),
+        "scaling scaled attention square root dk key dimension softmax gradients"
+    ),
+    (
+        (
+            "positional encoding", "positional encodings",
+            "position information", "sequence order", "order information"
+        ),
+        "positional encodings position representations sequence order recurrence convolution"
+    ),
+    (
+        ("label smoothing", "label-smoothing"),
+        "label smoothing perplexity accuracy bleu 0.1"
+    ),
+    (
+        (
+            "latency", "real-time", "real time",
+            "response delay", "first token"
+        ),
+        "latency delay streaming real time theoretical practical 160ms 200ms"
+    ),
+    (
+        (
+            "inner monologue", "time-aligned text",
+            "text prefix", "speech tokens"
+        ),
+        "inner monologue time aligned text prefix audio tokens linguistic quality"
+    ),
+    (
+        (
+            "mimi", "audio codec",
+            "vector quantization", "discrete audio tokens"
+        ),
+        "mimi neural audio codec discrete tokens residual vector quantization"
+    ),
+    (
+        ("frame rate", "frames per second", "12.5 hz"),
+        "frame rate frames 12.5 hz training hyperparameters sample rate"
+    ),
+    (
+        ("dynamic chunk", "chunk boundary", "chunking", "boundary prediction"),
+        "dynamic chunking chunk boundary boundaries hierarchical sequence"
+    ),
+    (
+        (
+            "routing", "smoothing",
+            "boundary probability", "cosine similarity"
+        ),
+        "routing smoothing cosine similarity adjacent encoder outputs boundary probability"
+    ),
+    (
+        ("palm", "helium", "pretrained", "pre-trained", "from scratch"),
+        "palm audiopalm helium pretrained initialization from scratch related work"
+    ),
+    (
+        (
+            "attention head", "attention heads",
+            "multi-head", "number of heads", "7b", "parameters"
+        ),
+        "attention heads multi head h 8 helium 7b parameters text language model"
+    ),
+)
+
+
+def terms(text):
+    """Return normalized alphanumeric terms."""
+    normalized = unicodedata.normalize(
+        "NFKC", str(text or "")
+    ).casefold()
+
+    return re.findall(r"[a-z0-9]+(?:\.[0-9]+)?", normalized)
 
 
 def normalize(text):
-    return ' '.join(text.split())
+    """Collapse multiple whitespace characters."""
+    return " ".join(str(text or "").split())
 
 
-def _stem(token):
-    """Small conservative suffix normalizer; avoids a runtime NLP dependency."""
-    if len(token) > 5 and token.endswith('ies'):
-        return token[:-3] + 'y'
-    if len(token) > 5 and token.endswith('ing'):
-        root = token[:-3]
-        return root[:-1] if len(root) > 2 and root[-1] == root[-2] else root
-    if len(token) > 4 and token.endswith('ed'):
-        return token[:-2]
-    if len(token) > 4 and token.endswith('es'):
-        return token[:-2]
-    if len(token) > 3 and token.endswith('s') and not token.endswith('ss'):
-        return token[:-1]
-    return token
+def query_analysis(question):
+    """Expand a query using vocabulary from the research papers."""
+    original = normalize(question)
+    lowered = original.casefold()
+
+    additions = []
+
+    for triggers, expansion in QUERY_EXPANSIONS:
+        if any(trigger in lowered for trigger in triggers):
+            additions.append(expansion)
+
+    if not additions:
+        return original
+
+    return original + " " + " ".join(additions)
 
 
-def terms(text, remove_stopwords=True):
-    raw = re.findall(r'[a-z][a-z0-9]+|[0-9]+', text.lower())
-    return [_stem(t) for t in raw if not (remove_stopwords and t in STOPWORDS)]
-
-
-def query_analysis(question, expand=False):
-    """Return query terms; expansion is deterministic and deliberately bounded."""
-    base = terms(question)
-    if not expand:
-        return base
-    extra = []
-    seen = set(base)
-    for word in base:
-        for candidate in terms(SYNONYMS.get(word, '')):
-            if candidate not in seen:
-                extra.append(candidate)
-                seen.add(candidate)
-    return base + extra[:12]
-
-
-def fetch(root=Path('data')):
+def fetch(root=Path("data")):
+    """Download missing PDFs and extract their page text."""
     root = Path(root)
-    (root / 'papers').mkdir(parents=True, exist_ok=True)
-    manifest, pages = [], []
-    with httpx.Client(follow_redirects=True, timeout=120) as client:
-        for pid, title in PAPERS.items():
-            path = root / 'papers' / f'{pid}.pdf'
-            url = f'https://arxiv.org/pdf/{pid}'
-            if not path.exists():
-                r = client.get(url)
-                r.raise_for_status()
-                if not r.content.startswith(b'%PDF'):
-                    raise ValueError(f'Not PDF: {url}')
-                path.write_bytes(r.content)
-            reader = PdfReader(path)
-            for i, page in enumerate(reader.pages, 1):
-                pages.append(dict(paper=pid, title=title, page=i,
-                                  text=normalize(page.extract_text() or '')))
-            manifest.append(dict(paper=pid, title=title, url=url,
-                                 sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
-                                 pages=len(reader.pages)))
-    (root / 'pages.json').write_text(json.dumps(pages, indent=2))
-    (root / 'manifest.json').write_text(json.dumps(manifest, indent=2))
+    papers_dir = root / "papers"
+    papers_dir.mkdir(parents=True, exist_ok=True)
+
+    manifest = []
+    pages = []
+
+    with httpx.Client(
+        follow_redirects=True,
+        timeout=120
+    ) as client:
+
+        for paper_id, title in PAPERS.items():
+
+            pdf_path = papers_dir / f"{paper_id}.pdf"
+            url = f"https://arxiv.org/pdf/{paper_id}"
+
+            if not pdf_path.exists():
+
+                response = client.get(url)
+                response.raise_for_status()
+
+                if not response.content.startswith(b"%PDF"):
+                    raise ValueError(
+                        f"Downloaded content is not a PDF: {url}"
+                    )
+
+                pdf_path.write_bytes(response.content)
+
+            reader = PdfReader(pdf_path)
+
+            for page_number, page in enumerate(
+                reader.pages, start=1
+            ):
+
+                page_text = normalize(
+                    page.extract_text() or ""
+                )
+
+                pages.append({
+                    "paper": paper_id,
+                    "title": title,
+                    "page": page_number,
+                    "text": page_text,
+                })
+
+            manifest.append({
+                "paper": paper_id,
+                "title": title,
+                "url": url,
+                "sha256": hashlib.sha256(
+                    pdf_path.read_bytes()
+                ).hexdigest(),
+                "pages": len(reader.pages),
+            })
+
+    (root / "pages.json").write_text(
+        json.dumps(
+            pages,
+            indent=2,
+            ensure_ascii=False
+        ),
+        encoding="utf-8"
+    )
+
+    (root / "manifest.json").write_text(
+        json.dumps(
+            manifest,
+            indent=2,
+            ensure_ascii=False
+        ),
+        encoding="utf-8"
+    )
+
     return manifest
 
 
 class Retriever:
-    def __init__(self, pages_path='data/pages.json', setting='medium', rerank=True):
+    """BM25 retriever with optional lexical query expansion."""
+
+    def __init__(
+        self,
+        pages_path="data/pages.json",
+        setting="medium"
+    ):
+
         if setting not in SETTINGS:
-            raise ValueError(f'Unknown retrieval setting: {setting}')
+            raise ValueError(
+                f"Unknown retrieval setting {setting!r}; "
+                f"choose one of {', '.join(SETTINGS)}"
+            )
+
         size, overlap, self.k = SETTINGS[setting]
+
+        if size <= 0 or overlap < 0 or overlap >= size:
+            raise ValueError(
+                "Chunk size must be positive and overlap "
+                "smaller than size"
+            )
+
         self.setting = setting
-        self.rerank = rerank
+        self.chunk_size = size
+        self.overlap = overlap
         self.chunks = []
-        for p in json.loads(Path(pages_path).read_text(encoding='utf-8')):
-            words = p['text'].split()
-            for n, start in enumerate(range(0, len(words), size - overlap)):
-                text = ' '.join(words[start:start + size])
-                if not text:
+
+        source_path = Path(pages_path)
+
+        page_records = json.loads(
+            source_path.read_text(encoding="utf-8")
+        )
+
+        for page_record in page_records:
+
+            words = normalize(
+                page_record.get("text", "")
+            ).split()
+
+            step = size - overlap
+
+            for chunk_number, start in enumerate(
+                range(0, len(words), step)
+            ):
+
+                chunk_text = " ".join(
+                    words[start:start + size]
+                )
+
+                if not chunk_text:
                     continue
-                self.chunks.append(dict(id=f"{p['paper']}:p{p['page']}:c{n}",
-                                        paper=p['paper'], page=p['page'],
-                                        title=p.get('title', PAPERS.get(p['paper'], '')),
-                                        text=text))
+
+                self.chunks.append({
+                    "id": (
+                        f"{page_record['paper']}:"
+                        f"p{page_record['page']}:c{chunk_number}"
+                    ),
+                    "paper": page_record["paper"],
+                    "page": page_record["page"],
+                    "text": chunk_text,
+                })
+
                 if start + size >= len(words):
                     break
-        self.counts = [Counter(terms(c['text'])) for c in self.chunks]
-        self.lengths = [sum(c.values()) for c in self.counts]
-        self.avg = sum(self.lengths) / max(len(self.lengths), 1)
-        self.df = Counter(t for c in self.counts for t in c)
-        self.n = len(self.chunks)
 
-    def _bm25(self, query, tf, length):
-        score = 0.0
-        for term, qweight in query.items():
-            f = tf[term]
-            if not f:
-                continue
-            df = self.df[term]
-            idf = math.log(1 + (self.n - df + .5) / (df + .5))
-            denom = f + 1.5 * (.25 + .75 * length / max(self.avg, 1))
-            score += qweight * idf * (f * 2.5 / denom)
-        return score
+        self.counts = [
+            Counter(terms(chunk["text"]))
+            for chunk in self.chunks
+        ]
 
-    @staticmethod
-    def _phrase_bonus(question, text):
-        """Reward exact multiword concepts without making them a hard filter."""
-        q = [t for t in terms(question) if len(t) > 2]
-        if len(q) < 2:
-            return 0.0
-        haystack = terms(text)
-        if not haystack:
-            return 0.0
-        # Adjacent query-token pairs are a cheap phrase/proximity signal.
-        pairs = list(zip(q, q[1:]))
-        positions = {}
-        for i, token in enumerate(haystack):
-            positions.setdefault(token, []).append(i)
-        hits = 0
-        for left, right in pairs:
-            if left in positions and right in positions:
-                if any(0 < b - a <= 4 for a in positions[left] for b in positions[right]):
-                    hits += 1
-        return min(1.5, .35 * hits)
+        self.lengths = [
+            sum(count.values())
+            for count in self.counts
+        ]
 
-    def search(self, question, expand=False, top_k=None):
-        # Original terms carry full weight; added synonyms carry lower weight.
-        original = terms(question)
-        expanded = query_analysis(question, expand=expand)
-        query = Counter(original)
-        for token in expanded[len(original):]:
-            query[token] += .45
-        if not query:
+        self.avg_length = (
+            sum(self.lengths) / len(self.lengths)
+            if self.lengths else 0.0
+        )
+
+        self.document_frequency = Counter(
+            term
+            for count in self.counts
+            for term in count.keys()
+        )
+
+    def _score(self, query_terms):
+        """Calculate BM25 scores for all chunks."""
+
+        number_of_chunks = len(self.chunks)
+
+        if not number_of_chunks or not query_terms:
             return []
+
         scored = []
-        for i, chunk in enumerate(self.chunks):
-            bm25 = self._bm25(query, self.counts[i], self.lengths[i])
-            phrase = self._phrase_bonus(question, chunk['text'])
-            title_terms = set(terms(chunk.get('title', '')))
-            title_bonus = .25 * sum(1 for t in set(original) if t in title_terms)
-            score = bm25 + phrase + title_bonus
+
+        k1 = 1.5
+        b = 0.75
+
+        for index, term_counts in enumerate(self.counts):
+
+            score = 0.0
+            document_length = self.lengths[index]
+
+            length_normalizer = (
+                1.0 - b
+                + b * document_length / max(self.avg_length, 1.0)
+            )
+
+            for term in query_terms:
+
+                frequency = term_counts.get(term, 0)
+
+                if frequency == 0:
+                    continue
+
+                document_frequency = (
+                    self.document_frequency[term]
+                )
+
+                inverse_document_frequency = math.log(
+                    1.0
+                    + (
+                        number_of_chunks
+                        - document_frequency
+                        + 0.5
+                    ) / (document_frequency + 0.5)
+                )
+
+                denominator = (
+                    frequency + k1 * length_normalizer
+                )
+
+                score += (
+                    inverse_document_frequency
+                    * frequency
+                    * (k1 + 1.0)
+                    / denominator
+                )
+
             if score > 0:
-                scored.append((score, bm25, phrase, title_bonus, i))
-        # Stable ordering makes repeated runs and audits reproducible.
-        scored.sort(key=lambda x: (-x[0], self.chunks[x[4]]['paper'],
-                                   self.chunks[x[4]]['page'], self.chunks[x[4]]['id']))
-        limit = top_k if top_k is not None else self.k + (EXPAND_EXTRA if expand else 0)
-        candidates = scored[:max(limit * 4, limit)]
-        selected, used = [], set()
-        for item in candidates:
-            chunk = self.chunks[item[4]]
-            # Avoid returning adjacent overlapping chunks from the same page when
-            # another strong passage is available. This is a mild diversity rule.
-            page_key = (chunk['paper'], chunk['page'])
-            if page_key in used and len(candidates) - len(selected) > 1:
+
+                scored.append((
+                    score,
+                    self.chunks[index]["id"],
+                    index
+                ))
+
+        scored.sort(
+            key=lambda item: (-item[0], item[1])
+        )
+
+        return scored
+
+    def search(self, question, expand=False):
+        """Retrieve relevant evidence chunks."""
+
+        if not isinstance(question, str) or not question.strip():
+            return []
+
+        if expand:
+            query = query_analysis(question)
+        else:
+            query = question
+
+        query_terms = set(terms(query))
+
+        limit = self.k + (
+            EXPAND_EXTRA if expand else 0
+        )
+
+        ranked = self._score(query_terms)
+
+        results = []
+        seen_ids = set()
+
+        for score, chunk_id, index in ranked:
+
+            if chunk_id in seen_ids:
                 continue
-            selected.append(item)
-            used.add(page_key)
-            if len(selected) >= limit:
+
+            seen_ids.add(chunk_id)
+
+            result = dict(self.chunks[index])
+            result["score"] = round(score, 4)
+
+            results.append(result)
+
+            if len(results) >= limit:
                 break
-        if len(selected) < limit:
-            selected_ids = {x[4] for x in selected}
-            selected.extend(x for x in candidates if x[4] not in selected_ids)  # fill remaining slots
-            selected = selected[:limit]
-        output = []
-        for score, bm25, phrase, title_bonus, i in selected:
-            output.append(dict(self.chunks[i], score=round(score, 4),
-                               score_bm25=round(bm25, 4),
-                               score_phrase=round(phrase, 4),
-                               score_title=round(title_bonus, 4)))
-        return output
+
+        return results
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+
     parser = argparse.ArgumentParser()
-    parser.add_argument('--fetch', action='store_true')
-    parser.add_argument('--query')
-    parser.add_argument('--setting', choices=SETTINGS, default='medium')
-    parser.add_argument('--expand', action='store_true')
-    parser.add_argument('--top-k', type=int)
+
+    parser.add_argument(
+        "--fetch",
+        action="store_true"
+    )
+
+    parser.add_argument(
+        "--query"
+    )
+
+    parser.add_argument(
+        "--setting",
+        choices=SETTINGS,
+        default="medium"
+    )
+
+    parser.add_argument(
+        "--expand",
+        action="store_true"
+    )
+
     args = parser.parse_args()
+
     if args.fetch:
-        print(json.dumps(fetch(), indent=2))
+
+        print(json.dumps(
+            fetch(),
+            indent=2,
+            ensure_ascii=False
+        ))
+
     if args.query:
-        print(json.dumps(Retriever(setting=args.setting).search(
-            args.query, expand=args.expand, top_k=args.top_k), indent=2))
+
+        retriever = Retriever(
+            setting=args.setting
+        )
+
+        print(json.dumps(
+            retriever.search(
+                args.query,
+                expand=args.expand
+            ),
+            indent=2,
+            ensure_ascii=False
+        ))

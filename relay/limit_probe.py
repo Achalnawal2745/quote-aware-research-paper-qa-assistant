@@ -65,8 +65,10 @@ async def main(a):
                         max_retries=0,max_tokens=a.max_tokens,
                         reasoning_effort='low' if 'gpt-oss' in a.model else None)
         try:
-            async with asyncio.timeout(a.deadline):
-                await adapter.complete(messages,state,purpose=purpose)
+            # asyncio.wait_for is compatible with Python 3.8+ (timeout() needs 3.11+).
+            await asyncio.wait_for(
+                adapter.complete(messages,state,purpose=purpose), timeout=a.deadline
+            )
         except TimeoutError:state.update(status='timeout',error='probe wall-clock deadline')
         except CallError as e:state.update(status=e.status,error=str(e),rejection_source=e.source)
         finally:

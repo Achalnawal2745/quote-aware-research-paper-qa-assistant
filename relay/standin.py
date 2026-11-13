@@ -47,12 +47,6 @@ def headers(now):
             'x-ratelimit-limit-tokens':str(config.tpm),
             'x-ratelimit-remaining-tokens':str(max(0,config.tpm-used)),
             'x-ratelimit-reset-tokens':f'{minute_reset:.3f}s',
-            'x-relay-limit-requests-minute':str(config.rpm),
-            'x-relay-remaining-requests-minute':str(max(0,config.rpm-len(window))),
-            'x-relay-limit-requests-day':str(config.rpd),
-            'x-relay-remaining-requests-day':str(max(0,config.rpd-day_requests)),
-            'x-relay-limit-tokens-day':str(config.tpd),
-            'x-relay-remaining-tokens-day':str(max(0,config.tpd-day_tokens)),
             'x-relay-source':'stand-in'}
 
 @app.get('/health')
