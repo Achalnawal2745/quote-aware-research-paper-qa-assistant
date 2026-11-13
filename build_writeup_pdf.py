@@ -260,7 +260,7 @@ def build_pdf(filename="writeup.pdf"):
     # Section 6
     story.append(Paragraph("6. Retries. Policy and failure cases.", h1_style))
     story.append(Paragraph(
-        "Our policy enforces a maximum of <b>1 retry</b>, gated strictly by an unspent outer deadline and honoring provider <code>Retry-After</code> headers. <b>Retrying made things strictly worse during sustained overload</b>: comparing <code>retry_disabled</code> (40 reqs) to <code>retry_enabled</code> (40 reqs) under 20 RPM load shows that retrying increased queue wait, elevated median latency from 807 ms to 1,448 ms, and actually <i>lowered</i> success rate from 37.5% to 30.0% by recycling failing requests back into an already congested queue.",
+        "Our policy enforces a maximum of <b>1 retry</b>, gated strictly by an unspent outer deadline and honoring provider <code>Retry-After</code> headers. <b>Retrying made things strictly worse during sustained overload</b>: in a 5-repetition pooled experiment (200 requests per configuration across matching seeds), enabling retries caused the overall success rate to fall from <b>22.0% to 15.0%</b> (-7.0 percentage points), timeouts more than doubled from 18 to 39, and p95 queue wait inflated from 1,552 ms to 1,747 ms due to recycling failing requests back into an already congested queue.",
         body_style
     ))
 
@@ -289,7 +289,7 @@ def build_pdf(filename="writeup.pdf"):
     story.append(Paragraph("How I worked with the assistant.", h1_style))
     story.append(Paragraph(
         "<b>Three prompts that mattered most</b>: (1) Structuring the 15-question benchmark with explicit expected refusals and verbatim citation checks to test hallucination. (2) Diagnosing Windows PowerShell syntax and CP1252 charmap encoding errors that crashed Unicode handling on <code>\\u2011</code> characters. (3) Formulating the mathematical recovery delay logic in <code>limit_probe.py</code> to ensure probe reservations never exceed daily quotas. "
-        "<b>Error caught</b>: The assistant initially attempted to open results CSVs using default system encoding, which crashed on Windows; I caught this via trace inspection and enforced <code>encoding='utf-8'</code> across all file handlers. "
+        "<b>Error caught</b>: I caught a subtle typographic failure where real Groq responses emitted non-breaking hyphens (U+2011) and en dashes where the raw PDF text had ASCII hyphens, causing 25 out of 68 valid quotes to be rejected as 'non-verbatim'; I designed a canonical typographic normalizer (mapping dashes, quotes, and ligatures) that restored 19 valid answers without compromising contiguous substring fidelity. "
         "<b>Overruling decision</b>: When the assistant suggested relying on synthetic simulator runs alone for the final report, I overruled it and mandated executing real Groq API calls across all three retrieval settings to prove authentic system behavior. What is distinctly mine is the real measured data and empirical trade-off analysis.",
         body_style
     ))

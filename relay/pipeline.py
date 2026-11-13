@@ -1,6 +1,8 @@
 
 import asyncio
 import json
+import re
+import unicodedata
 import time
 import uuid
 from datetime import datetime, timezone
@@ -45,6 +47,24 @@ def parse_object(text):
         raise ValueError("response must be a JSON object")
 
     return value
+
+
+_DASHES = dict.fromkeys(map(ord, "\u2010\u2011\u2012\u2013\u2014\u2015\u2212\u00ad"), "-")
+_QUOTES = {0x2018: "'", 0x2019: "'", 0x201C: '"', 0x201D: '"'}
+
+
+def canonical(text):
+    """Typographic canonical form used ONLY to compare a quote with its source passage.
+
+    Models emit non-breaking hyphens / en dashes / curly quotes where the PDF text has plain ASCII, and PDF
+    extraction leaves line-break hyphenation ("theoret- ical"). Those are formatting differences, not
+    different words. After this mapping the quote must still be an EXACT contiguous substring: no fuzzy
+    matching, no ellipsis-splicing, no reconstructed equations. Matching is case-insensitive.
+    """
+    t = unicodedata.normalize("NFKC", str(text or ""))
+    t = t.translate(_DASHES).translate(_QUOTES)
+    t = re.sub(r"(?<=\w)-\s+(?=\w)", "", t)      # join line-break hyphenation on both sides
+    return " ".join(t.split()).casefold()
 
 
 def validate(draft, chunks):
@@ -103,7 +123,7 @@ def validate(draft, chunks):
         if not isinstance(quote, str) or len(quote.split()) < 5:
             return False, "supporting quote too short"
 
-        if normalize(quote) not in normalize(index[chunk_id]):
+        if canonical(quote) not in canonical(index[chunk_id]):
             return False, "quote not verbatim"
 
     return True, "structural checks passed; semantic support not guaranteed"
